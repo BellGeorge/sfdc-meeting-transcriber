@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3680D421599E40400EE27D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680D411599E40400EE27D3 /* UIKit.framework */; };
+		F3680D441599E40400EE27D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680D431599E40400EE27D3 /* Foundation.framework */; };
+		F3680D461599E40400EE27D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680D451599E40400EE27D3 /* CoreGraphics.framework */; };
+		F3680D4C1599E40400EE27D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3680D4A1599E40400EE27D3 /* InfoPlist.strings */; };
+		F3680D4E1599E40400EE27D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3680D4D1599E40400EE27D3 /* main.m */; };
+		F3680D521599E40400EE27D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3680D511599E40400EE27D3 /* AppDelegate.m */; };
+		F3680D551599E40400EE27D3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3680D531599E40400EE27D3 /* MainStoryboard.storyboard */; };
+		F3680D581599E40400EE27D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3680D571599E40400EE27D3 /* ViewController.m */; };
+		F3680D601599E40400EE27D3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680D5F1599E40400EE27D3 /* SenTestingKit.framework */; };
+		F3680D611599E40400EE27D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680D411599E40400EE27D3 /* UIKit.framework */; };
+		F3680D621599E40400EE27D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680D431599E40400EE27D3 /* Foundation.framework */; };
+		F3680D6A1599E40400EE27D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3680D681599E40400EE27D3 /* InfoPlist.strings */; };
+		F3680D6D1599E40400EE27D3 /* NuanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3680D6C1599E40400EE27D3 /* NuanceTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3680D631599E40400EE27D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3680D341599E40400EE27D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3680D3C1599E40400EE27D3;
+			remoteInfo = Nuance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F3680D3D1599E40400EE27D3 /* Nuance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nuance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3680D411599E40400EE27D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F3680D431599E40400EE27D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F3680D451599E40400EE27D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F3680D491599E40400EE27D3 /* Nuance-Info.plist */ = {isa = PBXFileReference; path = "Nuance-Info.plist"; sourceTree = "<group>"; };
+		F3680D4B1599E40400EE27D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3680D4D1599E40400EE27D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3680D4F1599E40400EE27D3 /* Nuance-Prefix.pch */ = {isa = PBXFileReference; path = "Nuance-Prefix.pch"; sourceTree = "<group>"; };
+		F3680D501599E40400EE27D3 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3680D511599E40400EE27D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3680D541599E40400EE27D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F3680D561599E40400EE27D3 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		F3680D571599E40400EE27D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F3680D5E1599E40400EE27D3 /* NuanceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NuanceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3680D5F1599E40400EE27D3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		F3680D671599E40400EE27D3 /* NuanceTests-Info.plist */ = {isa = PBXFileReference; path = "NuanceTests-Info.plist"; sourceTree = "<group>"; };
+		F3680D691599E40400EE27D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3680D6B1599E40400EE27D3 /* NuanceTests.h */ = {isa = PBXFileReference; path = NuanceTests.h; sourceTree = "<group>"; };
+		F3680D6C1599E40400EE27D3 /* NuanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NuanceTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3680D3A1599E40400EE27D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3680D421599E40400EE27D3 /* UIKit.framework in Frameworks */,
+				F3680D441599E40400EE27D3 /* Foundation.framework in Frameworks */,
+				F3680D461599E40400EE27D3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3680D5A1599E40400EE27D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3680D601599E40400EE27D3 /* SenTestingKit.framework in Frameworks */,
+				F3680D611599E40400EE27D3 /* UIKit.framework in Frameworks */,
+				F3680D621599E40400EE27D3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3680D321599E40400EE27D3 = {
+			isa = PBXGroup;
+			children = (
+				F3680D471599E40400EE27D3 /* Nuance */,
+				F3680D651599E40400EE27D3 /* NuanceTests */,
+				F3680D401599E40400EE27D3 /* Frameworks */,
+				F3680D3E1599E40400EE27D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3680D3E1599E40400EE27D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3680D3D1599E40400EE27D3 /* Nuance.app */,
+				F3680D5E1599E40400EE27D3 /* NuanceTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3680D401599E40400EE27D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3680D411599E40400EE27D3 /* UIKit.framework */,
+				F3680D431599E40400EE27D3 /* Foundation.framework */,
+				F3680D451599E40400EE27D3 /* CoreGraphics.framework */,
+				F3680D5F1599E40400EE27D3 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3680D471599E40400EE27D3 /* Nuance */ = {
+			isa = PBXGroup;
+			children = (
+				F3680D501599E40400EE27D3 /* AppDelegate.h */,
+				F3680D511599E40400EE27D3 /* AppDelegate.m */,
+				F3680D531599E40400EE27D3 /* MainStoryboard.storyboard */,
+				F3680D561599E40400EE27D3 /* ViewController.h */,
+				F3680D571599E40400EE27D3 /* ViewController.m */,
+				F3680D481599E40400EE27D3 /* Supporting Files */,
+			);
+			path = Nuance;
+			sourceTree = "<group>";
+		};
+		F3680D481599E40400EE27D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3680D491599E40400EE27D3 /* Nuance-Info.plist */,
+				F3680D4A1599E40400EE27D3 /* InfoPlist.strings */,
+				F3680D4D1599E40400EE27D3 /* main.m */,
+				F3680D4F1599E40400EE27D3 /* Nuance-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F3680D651599E40400EE27D3 /* NuanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3680D6B1599E40400EE27D3 /* NuanceTests.h */,
+				F3680D6C1599E40400EE27D3 /* NuanceTests.m */,
+				F3680D661599E40400EE27D3 /* Supporting Files */,
+			);
+			path = NuanceTests;
+			sourceTree = "<group>";
+		};
+		F3680D661599E40400EE27D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3680D671599E40400EE27D3 /* NuanceTests-Info.plist */,
+				F3680D681599E40400EE27D3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3680D3C1599E40400EE27D3 /* Nuance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3680D701599E40400EE27D3 /* Build configuration list for PBXNativeTarget "Nuance" */;
+			buildPhases = (
+				F3680D391599E40400EE27D3 /* Sources */,
+				F3680D3A1599E40400EE27D3 /* Frameworks */,
+				F3680D3B1599E40400EE27D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nuance;
+			productName = Nuance;
+			productReference = F3680D3D1599E40400EE27D3 /* Nuance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3680D5D1599E40400EE27D3 /* NuanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3680D731599E40400EE27D3 /* Build configuration list for PBXNativeTarget "NuanceTests" */;
+			buildPhases = (
+				F3680D591599E40400EE27D3 /* Sources */,
+				F3680D5A1599E40400EE27D3 /* Frameworks */,
+				F3680D5B1599E40400EE27D3 /* Resources */,
+				F3680D5C1599E40400EE27D3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3680D641599E40400EE27D3 /* PBXTargetDependency */,
+			);
+			name = NuanceTests;
+			productName = NuanceTests;
+			productReference = F3680D5E1599E40400EE27D3 /* NuanceTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3680D341599E40400EE27D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = F3680D371599E40400EE27D3 /* Build configuration list for PBXProject "Nuance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F3680D321599E40400EE27D3;
+			productRefGroup = F3680D3E1599E40400EE27D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3680D3C1599E40400EE27D3 /* Nuance */,
+				F3680D5D1599E40400EE27D3 /* NuanceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3680D3B1599E40400EE27D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3680D4C1599E40400EE27D3 /* InfoPlist.strings in Resources */,
+				F3680D551599E40400EE27D3 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3680D5B1599E40400EE27D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3680D6A1599E40400EE27D3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F3680D5C1599E40400EE27D3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3680D391599E40400EE27D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3680D4E1599E40400EE27D3 /* main.m in Sources */,
+				F3680D521599E40400EE27D3 /* AppDelegate.m in Sources */,
+				F3680D581599E40400EE27D3 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3680D591599E40400EE27D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3680D6D1599E40400EE27D3 /* NuanceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3680D641599E40400EE27D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3680D3C1599E40400EE27D3 /* Nuance */;
+			targetProxy = F3680D631599E40400EE27D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3680D4A1599E40400EE27D3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3680D4B1599E40400EE27D3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F3680D531599E40400EE27D3 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3680D541599E40400EE27D3 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		F3680D681599E40400EE27D3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3680D691599E40400EE27D3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3680D6E1599E40400EE27D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F3680D6F1599E40400EE27D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3680D711599E40400EE27D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nuance/Nuance-Prefix.pch";
+				INFOPLIST_FILE = "Nuance/Nuance-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F3680D721599E40400EE27D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nuance/Nuance-Prefix.pch";
+				INFOPLIST_FILE = "Nuance/Nuance-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F3680D741599E40400EE27D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nuance.app/Nuance";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nuance/Nuance-Prefix.pch";
+				INFOPLIST_FILE = "NuanceTests/NuanceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F3680D751599E40400EE27D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nuance.app/Nuance";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nuance/Nuance-Prefix.pch";
+				INFOPLIST_FILE = "NuanceTests/NuanceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3680D371599E40400EE27D3 /* Build configuration list for PBXProject "Nuance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3680D6E1599E40400EE27D3 /* Debug */,
+				F3680D6F1599E40400EE27D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3680D701599E40400EE27D3 /* Build configuration list for PBXNativeTarget "Nuance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3680D711599E40400EE27D3 /* Debug */,
+				F3680D721599E40400EE27D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F3680D731599E40400EE27D3 /* Build configuration list for PBXNativeTarget "NuanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3680D741599E40400EE27D3 /* Debug */,
+				F3680D751599E40400EE27D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3680D341599E40400EE27D3 /* Project object */;
+}
