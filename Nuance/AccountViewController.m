@@ -7,6 +7,7 @@
 //
 
 #import "AccountViewController.h"
+#import "ContactsListViewController.h"
 
 @interface AccountViewController ()
 
@@ -47,5 +48,15 @@
 }
 
 - (IBAction)start:(id)sender {
+}
+
+#pragma mark - Segue support
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([segue.identifier isEqualToString:@"contactsScreen"]) {
+        ContactsListViewController *contacts = (ContactsListViewController*)segue.destinationViewController;
+        contacts.account = accountName;
+        
+    }
 }
 @end

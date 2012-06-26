@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SFRestAPI.h"
 
-@interface ContactsListViewController : UIViewController
+@interface ContactsListViewController : UIViewController <SFRestDelegate, UITableViewDataSource, UITabBarDelegate> {
+    
+}
+@property (weak, nonatomic) IBOutlet UITableView *contactsTable;
+@property (nonatomic, retain) NSString* account;
 
 - (IBAction)doneClicked:(id)sender;
 @end
