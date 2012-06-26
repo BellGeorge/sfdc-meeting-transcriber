@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFRestAPI.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFRestAPI</TokenIdentifier>
+			<Abstract>Main class used to issue REST requests to the standard Force.com REST API.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFRestAPI/apiVersion</TokenIdentifier>
+			<Abstract>The REST API version used for all the calls. This could be "v21.0", "v22.0"...
+The default value is kSFRestDefaultAPIVersion (currently "v23.0")</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSString *apiVersion</Declaration>
+			
+			
+			<Anchor>//api/name/apiVersion</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFRestAPI/sharedInstance</TokenIdentifier>
+			<Abstract>Returns the singleton instance of SFRestAPI
+After a successful oauth login with an SFOAuthCoordinator, you
+should set it as the coordinator property of this instance.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>+ (SFRestAPI *)sharedInstance</Declaration>
+			
+			
+			<Anchor>//api/name/sharedInstance</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/send:delegate:</TokenIdentifier>
+			<Abstract>Sends a REST request to the Salesforce server and invokes the appropriate delegate method.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (void)send:(SFRestRequest *)request delegate:(id&lt;SFRestDelegate&gt;)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>request</Name>
+					<Abstract>the SFRestRequest to be sent</Abstract>
+				</Parameter><Parameter>
+					<Name>delegate</Name>
+					<Abstract>the delegate object used when the response from the server is returned.
+This overwrites the delegate property of the request.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/send:delegate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForVersions</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which lists summary information about each
+Salesforce.com version currently available, including the version,
+label, and a link to each version's root.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForVersions</Declaration>
+			
+			
+			<Anchor>//api/name/requestForVersions</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForResources</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which lists available resources for the
+client's API version, including resource name and URI.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForResources</Declaration>
+			
+			
+			<Anchor>//api/name/requestForResources</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForDescribeGlobal</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which lists the available objects and their
+metadata for your organization's data.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForDescribeGlobal</Declaration>
+			
+			
+			<Anchor>//api/name/requestForDescribeGlobal</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForMetadataWithObjectType:</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which Describes the individual metadata for the
+specified object.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForMetadataWithObjectType:(NSString *)objectType</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>object type; for example, "Account"</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/requestForMetadataWithObjectType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForDescribeWithObjectType:</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which completely describes the individual metadata
+at all levels for the
+specified object.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForDescribeWithObjectType:(NSString *)objectType</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>object type; for example, "Account"</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/requestForDescribeWithObjectType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForRetrieveWithObjectType:objectId:fieldList:</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which retrieves field values for a record of the given type.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForRetrieveWithObjectType:(NSString *)objectType objectId:(NSString *)objectId fieldList:(NSString *)fieldList</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>object type; for example, "Account"</Abstract>
+				</Parameter><Parameter>
+					<Name>objectId</Name>
+					<Abstract>the record's object ID</Abstract>
+				</Parameter><Parameter>
+					<Name>fieldList</Name>
+					<Abstract>comma-separated list of fields for which
+to return values; for example, "Name,Industry,TickerSymbol".
+Pass nil to retrieve all the fields.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/requestForRetrieveWithObjectType:objectId:fieldList:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForCreateWithObjectType:fields:</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which creates a new record of the given type.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForCreateWithObjectType:(NSString *)objectType fields:(NSDictionary *)fields</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>object type; for example, "Account"</Abstract>
+				</Parameter><Parameter>
+					<Name>fields</Name>
+					<Abstract>an NSDictionary containing initial field names and values for
+the record, for example, {Name: "salesforce.com", TickerSymbol:
+"CRM"}</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/requestForCreateWithObjectType:fields:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForUpsertWithObjectType:externalIdField:externalId:fields:</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which creates or updates record of the given type, based on the
+given external ID.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForUpsertWithObjectType:(NSString *)objectType externalIdField:(NSString *)externalIdField externalId:(NSString *)externalId fields:(NSDictionary *)fields</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>object type; for example, "Account"</Abstract>
+				</Parameter><Parameter>
+					<Name>externalIdField</Name>
+					<Abstract>external ID field name; for example, "accountMaster__c"</Abstract>
+				</Parameter><Parameter>
+					<Name>externalId</Name>
+					<Abstract>the record's external ID value</Abstract>
+				</Parameter><Parameter>
+					<Name>fields</Name>
+					<Abstract>an NSDictionary containing field names and values for
+the record, for example, {Name: "salesforce.com", TickerSymbol
+"CRM"}</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/requestForUpsertWithObjectType:externalIdField:externalId:fields:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForUpdateWithObjectType:objectId:fields:</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which updates field values on a record of the given type.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForUpdateWithObjectType:(NSString *)objectType objectId:(NSString *)objectId fields:(NSDictionary *)fields</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>object type; for example, "Account"</Abstract>
+				</Parameter><Parameter>
+					<Name>objectId</Name>
+					<Abstract>the record's object ID</Abstract>
+				</Parameter><Parameter>
+					<Name>fields</Name>
+					<Abstract>an object containing initial field names and values for
+the record, for example, {Name: "salesforce.com", TickerSymbol
+"CRM"}</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/requestForUpdateWithObjectType:objectId:fields:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForDeleteWithObjectType:objectId:</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which deletes a record of the given type.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForDeleteWithObjectType:(NSString *)objectType objectId:(NSString *)objectId</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>object type; for example, "Account"</Abstract>
+				</Parameter><Parameter>
+					<Name>objectId</Name>
+					<Abstract>the record's object ID</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/requestForDeleteWithObjectType:objectId:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForQuery:</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which executes the specified SOQL query.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForQuery:(NSString *)soql</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>soql</Name>
+					<Abstract>a string containing the query to execute - for example, "SELECT Id,
+Name from Account ORDER BY Name LIMIT 20"</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/requestForQuery:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/requestForSearch:</TokenIdentifier>
+			<Abstract>Returns an SFRestRequest which executes the specified SOSL search.</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)requestForSearch:(NSString *)sosl</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sosl</Name>
+					<Abstract>a string containing the search to execute - for example, "FIND {needle}"</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/requestForSearch:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFRestAPI/userAgentString</TokenIdentifier>
+			<Abstract>Provides the User-Agent string used by the SDK</Abstract>
+			<DeclaredIn>SFRestAPI.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)userAgentString</Declaration>
+			
+			
+			<Anchor>//api/name/userAgentString</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/sendRESTRequest:failBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Send a request you've already built, using blocks to return status.</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (void)sendRESTRequest:(SFRestRequest *)request failBlock:(SFRestFailBlock)failBlock completeBlock:(id)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>request</Name>
+					<Abstract>the SFRestRequest to be sent</Abstract>
+				</Parameter><Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sendRESTRequest:failBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performSOQLQuery:failBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a SOQL query.</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performSOQLQuery:(NSString *)query failBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>query</Name>
+					<Abstract>the SOQL query to be executed</Abstract>
+				</Parameter><Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performSOQLQuery:failBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performSOSLSearch:failBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a SOSL search.</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performSOSLSearch:(NSString *)search failBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestArrayResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>search</Name>
+					<Abstract>the SOSL search to be executed</Abstract>
+				</Parameter><Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performSOSLSearch:failBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performDescribeGlobalWithFailBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a global describe.</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performDescribeGlobalWithFailBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performDescribeGlobalWithFailBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performDescribeWithObjectType:failBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a describe on a single sObject.</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performDescribeWithObjectType:(NSString *)objectType failBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>the API name of the object to describe.</Abstract>
+				</Parameter><Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performDescribeWithObjectType:failBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performMetadataWithObjectType:failBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a metadata describe on a single sObject.</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performMetadataWithObjectType:(NSString *)objectType failBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>the API name of the object to describe.</Abstract>
+				</Parameter><Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performMetadataWithObjectType:failBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performRetrieveWithObjectType:objectId:fieldList:failBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a retrieve for a single record.</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performRetrieveWithObjectType:(NSString *)objectType objectId:(NSString *)objectId fieldList:(NSArray *)fieldList failBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>the API name of the object to retrieve</Abstract>
+				</Parameter><Parameter>
+					<Name>objectId</Name>
+					<Abstract>the record ID of the record to retrieve</Abstract>
+				</Parameter><Parameter>
+					<Name>fieldList</Name>
+					<Abstract>an array of fields on this record to retrieve</Abstract>
+				</Parameter><Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performRetrieveWithObjectType:objectId:fieldList:failBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performUpdateWithObjectType:objectId:fields:failBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a DML update for a single record.</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performUpdateWithObjectType:(NSString *)objectType objectId:(NSString *)objectId fields:(NSDictionary *)fields failBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>the API name of the object to update</Abstract>
+				</Parameter><Parameter>
+					<Name>objectId</Name>
+					<Abstract>the record ID of the object</Abstract>
+				</Parameter><Parameter>
+					<Name>fields</Name>
+					<Abstract>a dictionary of fields to update.</Abstract>
+				</Parameter><Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performUpdateWithObjectType:objectId:fields:failBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performUpsertWithObjectType:externalIdField:externalId:fields:failBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a DML upsert for a single record.</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performUpsertWithObjectType:(NSString *)objectType externalIdField:(NSString *)externalIdField externalId:(NSString *)externalId fields:(NSDictionary *)fields failBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>the API name of the object to update</Abstract>
+				</Parameter><Parameter>
+					<Name>externalIdField</Name>
+					<Abstract>the API name of the external ID field to use for updating</Abstract>
+				</Parameter><Parameter>
+					<Name>externalId</Name>
+					<Abstract>the actual external Id</Abstract>
+				</Parameter><Parameter>
+					<Name>fields</Name>
+					<Abstract>a dictionary of fields to include in the upsert</Abstract>
+				</Parameter><Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performUpsertWithObjectType:externalIdField:externalId:fields:failBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performDeleteWithObjectType:objectId:failBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a DML delete on a single record</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performDeleteWithObjectType:(NSString *)objectType objectId:(NSString *)objectId failBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>the API name of the object to delete</Abstract>
+				</Parameter><Parameter>
+					<Name>objectId</Name>
+					<Abstract>the actual Id of the record to delete</Abstract>
+				</Parameter><Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performDeleteWithObjectType:objectId:failBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performCreateWithObjectType:fields:failBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a DML insert.</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performCreateWithObjectType:(NSString *)objectType fields:(NSDictionary *)fields failBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>objectType</Name>
+					<Abstract>the API name of the object to insert</Abstract>
+				</Parameter><Parameter>
+					<Name>fields</Name>
+					<Abstract>a dictionary of fields to use in the insert.</Abstract>
+				</Parameter><Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performCreateWithObjectType:fields:failBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performRequestForResourcesWithFailBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a request to list REST API resources</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performRequestForResourcesWithFailBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performRequestForResourcesWithFailBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRestAPI/performRequestForVersionsWithFailBlock:completeBlock:</TokenIdentifier>
+			<Abstract>Executes a request to list REST API versions</Abstract>
+			<DeclaredIn>SFRestAPI+Blocks.h</DeclaredIn>			
+			
+			<Declaration>- (SFRestRequest *)performRequestForVersionsWithFailBlock:(SFRestFailBlock)failBlock completeBlock:(SFRestDictionaryResponseBlock)completeBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>failBlock</Name>
+					<Abstract>the block to be executed when the request fails (timeout, cancel, or error)</Abstract>
+				</Parameter><Parameter>
+					<Name>completeBlock</Name>
+					<Abstract>the block to be executed when the request successfully completes</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>the newly sent SFRestRequest</Abstract></ReturnValue>
+			<Anchor>//api/name/performRequestForVersionsWithFailBlock:completeBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFRestAPI/sanitizeSOSLSearchTerm:</TokenIdentifier>
+			<Abstract>The search term to be sanitized.</Abstract>
+			<DeclaredIn>SFRestAPI+QueryBuilder.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)sanitizeSOSLSearchTerm:(NSString *)searchTerm</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>searchTerm</Name>
+					<Abstract>The search term to be sanitized.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>SOSL-safe version of search term</Abstract></ReturnValue>
+			<Anchor>//api/name/sanitizeSOSLSearchTerm:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFRestAPI/SOSLSearchWithSearchTerm:objectScope:</TokenIdentifier>
+			<Abstract>Generate a SOSL search.</Abstract>
+			<DeclaredIn>SFRestAPI+QueryBuilder.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)SOSLSearchWithSearchTerm:(NSString *)term objectScope:(NSDictionary *)objectScope</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>term</Name>
+					<Abstract>- the search term. This is sanitized for proper characters</Abstract>
+				</Parameter><Parameter>
+					<Name>objectScope</Name>
+					<Abstract>- nil to search all searchable objects, or a dictionary where each key is an sObject name
+and each value is a string with the fieldlist and (optional) where, order by, and limit clause for that object.
+or NSNull to not specify any fields/clauses for that object</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/SOSLSearchWithSearchTerm:objectScope:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFRestAPI/SOSLSearchWithSearchTerm:fieldScope:objectScope:limit:</TokenIdentifier>
+			<Abstract>Generate a SOSL search.</Abstract>
+			<DeclaredIn>SFRestAPI+QueryBuilder.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)SOSLSearchWithSearchTerm:(NSString *)term fieldScope:(NSString *)fieldScope objectScope:(NSDictionary *)objectScope limit:(NSInteger)limit</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>term</Name>
+					<Abstract>- the search term. This is sanitized for proper characters</Abstract>
+				</Parameter><Parameter>
+					<Name>fieldScope</Name>
+					<Abstract>- nil OR the SOSL scope, e.g. "IN ALL FIELDS". if nil, defaults to "IN NAME FIELDS"</Abstract>
+				</Parameter><Parameter>
+					<Name>objectScope</Name>
+					<Abstract>- nil to search all searchable objects, or a dictionary where each key is an sObject name
+and each value is a string with the fieldlist and (optional) where, order by, and limit clause for that object.
+or NSNull to not specify any fields/clauses for that object</Abstract>
+				</Parameter><Parameter>
+					<Name>limit</Name>
+					<Abstract>- overall search limit (max 200)</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/SOSLSearchWithSearchTerm:fieldScope:objectScope:limit:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFRestAPI/SOQLQueryWithFields:sObject:where:limit:</TokenIdentifier>
+			<Abstract>Generate a SOQL query.</Abstract>
+			<DeclaredIn>SFRestAPI+QueryBuilder.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)SOQLQueryWithFields:(NSArray *)fields sObject:(NSString *)sObject where:(NSString *)where limit:(NSInteger)limit</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fields</Name>
+					<Abstract>- NSArray of fields to select</Abstract>
+				</Parameter><Parameter>
+					<Name>sObject</Name>
+					<Abstract>- object to query</Abstract>
+				</Parameter><Parameter>
+					<Name>where</Name>
+					<Abstract>- nil OR where clause</Abstract>
+				</Parameter><Parameter>
+					<Name>limit</Name>
+					<Abstract>- limit count, or 0 for no limit (for use with query locators)</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/SOQLQueryWithFields:sObject:where:limit:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFRestAPI/SOQLQueryWithFields:sObject:where:groupBy:having:orderBy:limit:</TokenIdentifier>
+			<Abstract>Generate a SOQL query.</Abstract>
+			<DeclaredIn>SFRestAPI+QueryBuilder.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)SOQLQueryWithFields:(NSArray *)fields sObject:(NSString *)sObject where:(NSString *)where groupBy:(NSArray *)groupBy having:(NSString *)having orderBy:(NSArray *)orderBy limit:(NSInteger)limit</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>fields</Name>
+					<Abstract>- NSArray of fields to select</Abstract>
+				</Parameter><Parameter>
+					<Name>sObject</Name>
+					<Abstract>- object to query</Abstract>
+				</Parameter><Parameter>
+					<Name>where</Name>
+					<Abstract>- nil OR where clause</Abstract>
+				</Parameter><Parameter>
+					<Name>groupBy</Name>
+					<Abstract>- nil OR NSArray of strings, each string is an individual group by clause</Abstract>
+				</Parameter><Parameter>
+					<Name>having</Name>
+					<Abstract>- nil OR having clause</Abstract>
+				</Parameter><Parameter>
+					<Name>orderBy</Name>
+					<Abstract>- nil OR NSArray of strings, each string is an individual order by clause</Abstract>
+				</Parameter><Parameter>
+					<Name>limit</Name>
+					<Abstract>- limit count, or 0 for no limit (for use with query locators)</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/SOQLQueryWithFields:sObject:where:groupBy:having:orderBy:limit:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/FMDatabase.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/FMDatabase</TokenIdentifier>
+			<Abstract></Abstract>
+			<DeclaredIn>FMDatabase.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/FMDatabase/safelyEndTransaction</TokenIdentifier>
+			<Abstract>End any transaction currently in progress with a rollback.</Abstract>
+			<DeclaredIn>FMDatabase.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)safelyEndTransaction</Declaration>
+			
+			<ReturnValue><Abstract>YES if the database was already in a transaction, NO otherwise</Abstract></ReturnValue>
+			<Anchor>//api/name/safelyEndTransaction</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFSmartStore.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFSmartStore</TokenIdentifier>
+			<Abstract>The default store name used by the SFSmartStorePlugin: native code may choose
+to use separate stores.</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSmartStore/storeName</TokenIdentifier>
+			<Abstract>The name of this store.</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSString *storeName</Declaration>
+			
+			
+			<Anchor>//api/name/storeName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSmartStore/storeDb</TokenIdentifier>
+			<Abstract>The db access object for this store.</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, strong) FMDatabase *storeDb</Declaration>
+			
+			
+			<Anchor>//api/name/storeDb</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFSmartStore/sharedStoreWithName:</TokenIdentifier>
+			<Abstract>Use this method to obtain a shared store instance with a particular name.</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>+ (id)sharedStoreWithName:(NSString *)storeName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>storeName</Name>
+					<Abstract>The name of the store.  If in doubt, use kDefaultSmartStoreName.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>A shared instance of a store with the given name.</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedStoreWithName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFSmartStore/removeSharedStoreWithName:</TokenIdentifier>
+			<Abstract>You may use this method to completely remove a persistent shared store with
+the given name.</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>+ (void)removeSharedStoreWithName:(NSString *)storeName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>storeName</Name>
+					<Abstract>The name of the store.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeSharedStoreWithName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFSmartStore/storeDirectoryForStoreName:</TokenIdentifier>
+			<Abstract>The name of the store.</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)storeDirectoryForStoreName:(NSString *)storeName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>storeName</Name>
+					<Abstract>The name of the store.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>The filesystem diretory containing for the given store name</Abstract></ReturnValue>
+			<Anchor>//api/name/storeDirectoryForStoreName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFSmartStore/persistentStoreExists:</TokenIdentifier>
+			<Abstract>The name of the store (excluding paths)</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)persistentStoreExists:(NSString *)storeName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>storeName</Name>
+					<Abstract>The name of the store (excluding paths)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>Does this store already exist in persistent storage (ignoring cache) ?</Abstract></ReturnValue>
+			<Anchor>//api/name/persistentStoreExists:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSmartStore/indicesForSoup:</TokenIdentifier>
+			<Abstract>the name of the soup</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)indicesForSoup:(NSString *)soupName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>soupName</Name>
+					<Abstract>the name of the soup</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>NSArray of SFSoupIndex for the given soup</Abstract></ReturnValue>
+			<Anchor>//api/name/indicesForSoup:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSmartStore/soupExists:</TokenIdentifier>
+			<Abstract>the name of the soup</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)soupExists:(NSString *)soupName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>soupName</Name>
+					<Abstract>the name of the soup</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>Does a soup with the given name already exist?</Abstract></ReturnValue>
+			<Anchor>//api/name/soupExists:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSmartStore/registerSoup:withIndexSpecs:</TokenIdentifier>
+			<Abstract>Ensure that a soup with the given name exists.
+Either creates a new soup or returns an existing soup.</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)registerSoup:(NSString *)soupName withIndexSpecs:(NSArray *)indexSpecs</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>soupName</Name>
+					<Abstract>The name of the soup to register</Abstract>
+				</Parameter><Parameter>
+					<Name>indexSpecs</Name>
+					<Abstract>Array of one ore more IndexSpec objects as dictionaries</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>YES if the soup registered OK</Abstract></ReturnValue>
+			<Anchor>//api/name/registerSoup:withIndexSpecs:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSmartStore/countEntriesInSoup:withQuerySpec:</TokenIdentifier>
+			<Abstract>Get the number of entries that would be returned with the given query spec</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>- (NSUInteger)countEntriesInSoup:(NSString *)soupName withQuerySpec:(SFSoupQuerySpec *)querySpec</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>soupName</Name>
+					<Abstract>the name of the soup</Abstract>
+				</Parameter><Parameter>
+					<Name>querySpec</Name>
+					<Abstract>a native query spec</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/countEntriesInSoup:withQuerySpec:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSmartStore/querySoup:withQuerySpec:</TokenIdentifier>
+			<Abstract>Search soup for entries matching the querySpec</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>- (SFSoupCursor *)querySoup:(NSString *)soupName withQuerySpec:(NSDictionary *)querySpec</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>soupName</Name>
+					<Abstract>The name of the soup to query</Abstract>
+				</Parameter><Parameter>
+					<Name>querySpec</Name>
+					<Abstract>A querySpec as a dictionary</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>A cursor</Abstract></ReturnValue>
+			<Anchor>//api/name/querySoup:withQuerySpec:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSmartStore/querySoup:withQuerySpec:pageIndex:</TokenIdentifier>
+			<Abstract>Search soup for entries matching the querySpec</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)querySoup:(NSString *)soupName withQuerySpec:(SFSoupQuerySpec *)querySpec pageIndex:(NSUInteger)pageIndex</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>soupName</Name>
+					<Abstract>The name of the soup to query</Abstract>
+				</Parameter><Parameter>
+					<Name>querySpec</Name>
+					<Abstract>A native SFSoupQuerySpec</Abstract>
+				</Parameter><Parameter>
+					<Name>pageIndex</Name>
+					<Abstract>The page index to start the entries at (this supports paging)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>A set of entries given the pageSize provided in the querySpec</Abstract></ReturnValue>
+			<Anchor>//api/name/querySoup:withQuerySpec:pageIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSmartStore/removeSoup:</TokenIdentifier>
+			<Abstract>Remove soup completely from the store.</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeSoup:(NSString *)soupName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>soupName</Name>
+					<Abstract>The name of the soup to remove from the store.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeSoup:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSmartStore/isFileDataProtectionActive</TokenIdentifier>
+			<Abstract>This is updated based on receiving notifications for
+UIApplicationProtectedDataDidBecomeAvailable / UIApplicationProtectedDataWillBecomeUnavailable.
+Note that on the simulator currently, data protection is NEVER active.</Abstract>
+			<DeclaredIn>SFSmartStore.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)isFileDataProtectionActive</Declaration>
+			
+			<ReturnValue><Abstract>Are we sure that file data protection (full passcode-based encryption) is available?</Abstract></ReturnValue>
+			<Anchor>//api/name/isFileDataProtectionActive</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

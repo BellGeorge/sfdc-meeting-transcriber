@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSDictionary(NullHandling).html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSDictionary</TokenIdentifier>
+			<Abstract>NSDictionary category for handling NULL entries in the dictionary.</Abstract>
+			<DeclaredIn>NSDictionary+NullHandling.h</DeclaredIn>
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary/nonNullObjectForKey:</TokenIdentifier>
+			<Abstract>The key to look up in the dictionary.</Abstract>
+			<DeclaredIn>NSDictionary+NullHandling.h</DeclaredIn>			
+			
+			<Declaration>- (id)nonNullObjectForKey:(id)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract>The key to look up in the dictionary.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>nil instead of NSNull if the key doesn't have a non-null value</Abstract></ReturnValue>
+			<Anchor>//api/name/nonNullObjectForKey:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

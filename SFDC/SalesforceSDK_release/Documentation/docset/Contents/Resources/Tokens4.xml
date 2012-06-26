@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFOAuthCredentials.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFOAuthCredentials</TokenIdentifier>
+			<Abstract>Object representing an individual user account's logon credentials.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SFOAuthCoordinator</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/protocol</TokenIdentifier>
+			<Abstract>Protocol scheme for authenticating this account.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, retain) NSString *protocol</Declaration>
+			
+			
+			<Anchor>//api/name/protocol</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/domain</TokenIdentifier>
+			<Abstract>Logon host domain name.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *domain</Declaration>
+			
+			
+			<Anchor>//api/name/domain</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/identifier</TokenIdentifier>
+			<Abstract>Credential identifier used to uniquely identify this credential in the keychain.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (copy) NSString *identifier</Declaration>
+			
+			
+			<Anchor>//api/name/identifier</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/clientId</TokenIdentifier>
+			<Abstract>Client consumer key.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (copy) NSString *clientId</Declaration>
+			
+			
+			<Anchor>//api/name/clientId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/redirectUri</TokenIdentifier>
+			<Abstract>Callback URL to load at the end of the authentication process.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *redirectUri</Declaration>
+			
+			
+			<Anchor>//api/name/redirectUri</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/activationCode</TokenIdentifier>
+			<Abstract>Activation code.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *activationCode</Declaration>
+			
+			
+			<Anchor>//api/name/activationCode</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/refreshToken</TokenIdentifier>
+			<Abstract>Token used to refresh the user's session.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *refreshToken</Declaration>
+			
+			
+			<Anchor>//api/name/refreshToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/accessToken</TokenIdentifier>
+			<Abstract>The access token for the user's session.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *accessToken</Declaration>
+			
+			
+			<Anchor>//api/name/accessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/organizationId</TokenIdentifier>
+			<Abstract>A readonly convenience property returning the Salesforce Organization ID provided in the path component of the identityUrl.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *organizationId</Declaration>
+			
+			
+			<Anchor>//api/name/organizationId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/instanceUrl</TokenIdentifier>
+			<Abstract>The URL of the server instance for this session.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSURL *instanceUrl</Declaration>
+			
+			
+			<Anchor>//api/name/instanceUrl</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/issuedAt</TokenIdentifier>
+			<Abstract>The timestamp when the session access token was issued.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSDate *issuedAt</Declaration>
+			
+			
+			<Anchor>//api/name/issuedAt</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/identityUrl</TokenIdentifier>
+			<Abstract>The identity URL for the user returned as part of a successful authentication response.
+The format of the URL is: https://login.salesforce.com/ID/orgID/userID where orgId is the ID of the Salesforce organization
+that the user belongs to, and userID is the Salesforce user ID.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSURL *identityUrl</Declaration>
+			
+			
+			<Anchor>//api/name/identityUrl</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/userId</TokenIdentifier>
+			<Abstract>A readonly convenience property returning the first 15 characters of the Salesforce User ID provided in the final path
+component of the identityUrl.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *userId</Declaration>
+			
+			
+			<Anchor>//api/name/userId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/logLevel</TokenIdentifier>
+			<Abstract>The log level controlling which events are logged based on their severity.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) SFOAuthLogLevel logLevel</Declaration>
+			
+			
+			<Anchor>//api/name/logLevel</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFOAuthCredentials/encrypted</TokenIdentifier>
+			<Abstract>Determines if sensitive data such as the refreshToken and accessToken are encrypted</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, getter=isEncrypted) BOOL encrypted</Declaration>
+			
+			
+			<Anchor>//api/name/encrypted</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFOAuthCredentials/initWithIdentifier:clientId:encrypted:</TokenIdentifier>
+			<Abstract>Initializes an authentication credential object with the given identifier and client ID. This is the designated initializer.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithIdentifier:(NSString *)theIdentifier clientId:(NSString *)theClientId encrypted:(BOOL)encrypted</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>theIdentifier</Name>
+					<Abstract>An identifier for this credential instance.</Abstract>
+				</Parameter><Parameter>
+					<Name>theClientId</Name>
+					<Abstract>The client ID (also known as consumer key) to be used for the OAuth session.</Abstract>
+				</Parameter><Parameter>
+					<Name>encrypted</Name>
+					<Abstract>Determines if the sensitive data like refreshToken and accessToken should be encrypted</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>An initialized authentication credential object.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithIdentifier:clientId:encrypted:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFOAuthCredentials/revoke</TokenIdentifier>
+			<Abstract>Revoke the OAuth access and refresh tokens.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>- (void)revoke</Declaration>
+			
+			
+			<Anchor>//api/name/revoke</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFOAuthCredentials/revokeAccessToken</TokenIdentifier>
+			<Abstract>Revoke the OAuth access token.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>- (void)revokeAccessToken</Declaration>
+			
+			
+			<Anchor>//api/name/revokeAccessToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFOAuthCredentials/revokeRefreshToken</TokenIdentifier>
+			<Abstract>Revoke the OAuth refresh token.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>- (void)revokeRefreshToken</Declaration>
+			
+			
+			<Anchor>//api/name/revokeRefreshToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFOAuthCredentials/revokeActivationCode</TokenIdentifier>
+			<Abstract>Revoke the OAuth activation code.</Abstract>
+			<DeclaredIn>SFOAuthCredentials.h</DeclaredIn>			
+			
+			<Declaration>- (void)revokeActivationCode</Declaration>
+			
+			
+			<Anchor>//api/name/revokeActivationCode</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

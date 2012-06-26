@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFSoupCursor.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFSoupCursor</TokenIdentifier>
+			<Abstract>Defines a cursor into data stored in a soup.</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>
+			
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupCursor/soupName</TokenIdentifier>
+			<Abstract>Soup name from which this cursor was generated.</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSString *soupName</Declaration>
+			
+			
+			<Anchor>//api/name/soupName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupCursor/cursorId</TokenIdentifier>
+			<Abstract>A unique ID for this cursor.</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSString *cursorId</Declaration>
+			
+			
+			<Anchor>//api/name/cursorId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupCursor/querySpec</TokenIdentifier>
+			<Abstract>The query spec that generated this cursor.</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, strong) SFSoupQuerySpec *querySpec</Declaration>
+			
+			
+			<Anchor>//api/name/querySpec</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupCursor/currentPageOrderedEntries</TokenIdentifier>
+			<Abstract>The list of current page entries, ordered as requested in the querySpec.</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSArray *currentPageOrderedEntries</Declaration>
+			
+			
+			<Anchor>//api/name/currentPageOrderedEntries</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupCursor/pageSize</TokenIdentifier>
+			<Abstract>The maximum number of entries returned per page.</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSNumber *pageSize</Declaration>
+			
+			
+			<Anchor>//api/name/pageSize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupCursor/totalPages</TokenIdentifier>
+			<Abstract>The total number of pages of results available .</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly, strong) NSNumber *totalPages</Declaration>
+			
+			
+			<Anchor>//api/name/totalPages</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupCursor/currentPageIndex</TokenIdentifier>
+			<Abstract>The current page index among totalPages available: writing this value
+causes currentPageOrderedEntries to be refetched.</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite, strong) NSNumber *currentPageIndex</Declaration>
+			
+			
+			<Anchor>//api/name/currentPageIndex</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSoupCursor/initWithSoupName:store:querySpec:totalEntries:</TokenIdentifier>
+			<Abstract>Initializes a new instance of a soup cursor.</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithSoupName:(NSString *)soupName store:(SFSmartStore *)store querySpec:(SFSoupQuerySpec *)querySpec totalEntries:(NSUInteger)totalEntries</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>soupName</Name>
+					<Abstract>The name of the soup containing the data.</Abstract>
+				</Parameter><Parameter>
+					<Name>store</Name>
+					<Abstract>The store where the soup is contained.</Abstract>
+				</Parameter><Parameter>
+					<Name>querySpec</Name>
+					<Abstract>The query used to retrieve the data.</Abstract>
+				</Parameter><Parameter>
+					<Name>totalEntries</Name>
+					<Abstract>The total number of entries retrieved from the query.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithSoupName:store:querySpec:totalEntries:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSoupCursor/asDictionary</TokenIdentifier>
+			<Abstract>The NSDictionary representation of this object.</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>			
+			
+			<Declaration>- (NSDictionary *)asDictionary</Declaration>
+			
+			<ReturnValue><Abstract>Dictionary representation of this object, for translation to JSON.</Abstract></ReturnValue>
+			<Anchor>//api/name/asDictionary</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSoupCursor/close</TokenIdentifier>
+			<Abstract>Close this cursor when finished operating on it.</Abstract>
+			<DeclaredIn>SFSoupCursor.h</DeclaredIn>			
+			
+			<Declaration>- (void)close</Declaration>
+			
+			
+			<Anchor>//api/name/close</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

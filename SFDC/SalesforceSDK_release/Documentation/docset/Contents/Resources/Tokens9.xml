@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFSoupIndex.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFSoupIndex</TokenIdentifier>
+			<Abstract>Definition of an index on a given soup.</Abstract>
+			<DeclaredIn>SFSoupIndex.h</DeclaredIn>
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupIndex/path</TokenIdentifier>
+			<Abstract>The simple or compound path to the index value, e.g. "Id" or "Account.Id".</Abstract>
+			<DeclaredIn>SFSoupIndex.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupIndex/indexType</TokenIdentifier>
+			<Abstract>The type of index this is (string or date).</Abstract>
+			<DeclaredIn>SFSoupIndex.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSString *indexType</Declaration>
+			
+			
+			<Anchor>//api/name/indexType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupIndex/columnType</TokenIdentifier>
+			<Abstract>The type of data that will be indexed (string or integer).</Abstract>
+			<DeclaredIn>SFSoupIndex.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *columnType</Declaration>
+			
+			
+			<Anchor>//api/name/columnType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupIndex/columnName</TokenIdentifier>
+			<Abstract>The name of the column that will store the index.</Abstract>
+			<DeclaredIn>SFSoupIndex.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *columnName</Declaration>
+			
+			
+			<Anchor>//api/name/columnName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSoupIndex/initWithPath:indexType:columnName:</TokenIdentifier>
+			<Abstract>Designated initializer.</Abstract>
+			<DeclaredIn>SFSoupIndex.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithPath:(NSString *)path indexType:(NSString *)type columnName:(NSString *)columnName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>path</Name>
+					<Abstract>The simple or compound path to the index value, e.g. "Id" or "Account.Id".</Abstract>
+				</Parameter><Parameter>
+					<Name>type</Name>
+					<Abstract>An index type, e.g. kSoupIndexTypeString.</Abstract>
+				</Parameter><Parameter>
+					<Name>columnName</Name>
+					<Abstract>The SQL column name, or nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithPath:indexType:columnName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSoupIndex/initWithIndexSpec:</TokenIdentifier>
+			<Abstract>Creates an SFSoupIndex based on the given NSDictionary index spec.</Abstract>
+			<DeclaredIn>SFSoupIndex.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithIndexSpec:(NSDictionary *)indexSpec</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>indexSpec</Name>
+					<Abstract>the indexSpec to use</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>Initialized SFSoupIndex object.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithIndexSpec:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

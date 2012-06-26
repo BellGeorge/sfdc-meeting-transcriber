@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SFOAuthCoordinator.h"
+#import "AppManager.h"
+#import "SFRestAPI.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <SFOAuthCoordinatorDelegate> {
+    AppManager *_appManager;
+    BOOL authenticate;
+}
 
+@property (nonatomic, retain) SFOAuthCoordinator *coordinator;
+
+- (IBAction)loginButtonClicked:(id)sender;
 @end

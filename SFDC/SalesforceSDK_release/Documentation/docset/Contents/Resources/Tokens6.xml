@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFRestRequest.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFRestRequest</TokenIdentifier>
+			<Abstract>Request object used to send a REST request to Salesforce.com</Abstract>
+			<DeclaredIn>SFRestRequest.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SFRestAPI</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFRestRequest/method</TokenIdentifier>
+			<Abstract>The HTTP method of the request.  See SFRestMethod.</Abstract>
+			<DeclaredIn>SFRestRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) SFRestMethod method</Declaration>
+			
+			
+			<Anchor>//api/name/method</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFRestRequest/path</TokenIdentifier>
+			<Abstract>The path of the request.
+For instance, "" (empty string), "v22.0/recent", "v22.0/query".
+Note that the path doesn't have to start with a '/'. For instance, passing "v22.0/recent" is the same as passing "/v22.0/recent".</Abstract>
+			<DeclaredIn>SFRestRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFRestRequest/queryParams</TokenIdentifier>
+			<Abstract>The query parameters of the request (could be nil).
+Note that URL encoding of the parameters will automatically happen when the request is sent.</Abstract>
+			<DeclaredIn>SFRestRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSDictionary *queryParams</Declaration>
+			
+			
+			<Anchor>//api/name/queryParams</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFRestRequest/delegate</TokenIdentifier>
+			<Abstract>The delegate for this request. Notified of request status.</Abstract>
+			<DeclaredIn>SFRestRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) id&lt;SFRestDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFRestRequest/endpoint</TokenIdentifier>
+			<Abstract>Typically kSFDefaultRestEndpoint but you may use eg custom Apex endpoints</Abstract>
+			<DeclaredIn>SFRestRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSString *endpoint</Declaration>
+			
+			
+			<Anchor>//api/name/endpoint</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFRestRequest/requestWithMethod:path:queryParams:</TokenIdentifier>
+			<Abstract>Creates an SFRestRequest object. See SFRestMethod.</Abstract>
+			<DeclaredIn>SFRestRequest.h</DeclaredIn>			
+			
+			<Declaration>+ (id)requestWithMethod:(SFRestMethod)method path:(NSString *)path queryParams:(NSDictionary *)queryParams</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>method</Name>
+					<Abstract>the HTTP method</Abstract>
+				</Parameter><Parameter>
+					<Name>path</Name>
+					<Abstract>the request path</Abstract>
+				</Parameter><Parameter>
+					<Name>queryParams</Name>
+					<Abstract>the parameters of the request (could be nil)</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/requestWithMethod:path:queryParams:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

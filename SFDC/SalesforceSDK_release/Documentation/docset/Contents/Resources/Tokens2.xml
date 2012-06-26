@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFJsonUtils.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFJsonUtils</TokenIdentifier>
+			<Abstract>This class helps decouple framework code from the underlying JSON implementation.</Abstract>
+			<DeclaredIn>SFJsonUtils.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFJsonUtils/JSONRepresentation:</TokenIdentifier>
+			<Abstract>Creates the JSON representation of an object.</Abstract>
+			<DeclaredIn>SFJsonUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)JSONRepresentation:(id)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract>The object to JSON-ify</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>a JSON string representation of an Objective-C object</Abstract></ReturnValue>
+			<Anchor>//api/name/JSONRepresentation:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFJsonUtils/JSONDataRepresentation:</TokenIdentifier>
+			<Abstract>Creates the JSON-as-NSData representation of an object.</Abstract>
+			<DeclaredIn>SFJsonUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (NSData *)JSONDataRepresentation:(id)obj</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>obj</Name>
+					<Abstract>The object to JSON-ify.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>A JSON string in NSData format, UTF8 encoded.</Abstract></ReturnValue>
+			<Anchor>//api/name/JSONDataRepresentation:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFJsonUtils/objectFromJSONString:</TokenIdentifier>
+			<Abstract>Creates an object from a string of JSON data.</Abstract>
+			<DeclaredIn>SFJsonUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (id)objectFromJSONString:(NSString *)jsonString</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>jsonString</Name>
+					<Abstract>A JSON object string.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>An Objective-C object such as an NSDictionary or NSArray.</Abstract></ReturnValue>
+			<Anchor>//api/name/objectFromJSONString:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFJsonUtils/objectFromJSONData:</TokenIdentifier>
+			<Abstract>Creates an object from a JSON-as-NSData object.</Abstract>
+			<DeclaredIn>SFJsonUtils.h</DeclaredIn>			
+			
+			<Declaration>+ (id)objectFromJSONData:(NSData *)jsonData</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>jsonData</Name>
+					<Abstract>JSON data in an NSData wrapper (UTF8 encoding assumed).</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>An Objective-C object such as an NSDictionary or NSArray.</Abstract></ReturnValue>
+			<Anchor>//api/name/objectFromJSONData:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

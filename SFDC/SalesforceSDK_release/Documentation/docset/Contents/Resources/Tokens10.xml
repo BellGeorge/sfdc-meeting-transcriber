@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFSoupQuerySpec.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFSoupQuerySpec</TokenIdentifier>
+			<Abstract>Object containing the query specification for queries against a soup.</Abstract>
+			<DeclaredIn>SFSoupQuerySpec.h</DeclaredIn>
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupQuerySpec/queryType</TokenIdentifier>
+			<Abstract>The type of query to run (exact, range, like).</Abstract>
+			<DeclaredIn>SFSoupQuerySpec.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) SFSoupQueryType queryType</Declaration>
+			
+			
+			<Anchor>//api/name/queryType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupQuerySpec/path</TokenIdentifier>
+			<Abstract>The indexPath to use for the query.  Compound paths must be dot-delimited ie parent.child.grandchild.field .</Abstract>
+			<DeclaredIn>SFSoupQuerySpec.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupQuerySpec/beginKey</TokenIdentifier>
+			<Abstract>beginKey is used for range, exact, and like queries.</Abstract>
+			<DeclaredIn>SFSoupQuerySpec.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSString *beginKey</Declaration>
+			
+			
+			<Anchor>//api/name/beginKey</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupQuerySpec/endKey</TokenIdentifier>
+			<Abstract>endKey is used for range queries.</Abstract>
+			<DeclaredIn>SFSoupQuerySpec.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSString *endKey</Declaration>
+			
+			
+			<Anchor>//api/name/endKey</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupQuerySpec/order</TokenIdentifier>
+			<Abstract>A sort order for the query (ascending, descending).</Abstract>
+			<DeclaredIn>SFSoupQuerySpec.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) SFSoupQuerySortOrder order</Declaration>
+			
+			
+			<Anchor>//api/name/order</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupQuerySpec/pageSize</TokenIdentifier>
+			<Abstract>The number of entries per page to return.</Abstract>
+			<DeclaredIn>SFSoupQuerySpec.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger pageSize</Declaration>
+			
+			
+			<Anchor>//api/name/pageSize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSoupQuerySpec/sqlSortOrder</TokenIdentifier>
+			<Abstract>ASC or DESC</Abstract>
+			<DeclaredIn>SFSoupQuerySpec.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *sqlSortOrder</Declaration>
+			
+			
+			<Anchor>//api/name/sqlSortOrder</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSoupQuerySpec/initWithDictionary:</TokenIdentifier>
+			<Abstract>Initializes the object with the given query spec.</Abstract>
+			<DeclaredIn>SFSoupQuerySpec.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithDictionary:(NSDictionary *)querySpec</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>querySpec</Name>
+					<Abstract>the name/value pairs defining the query spec.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract>A new instance of the object.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSoupQuerySpec/asDictionary</TokenIdentifier>
+			<Abstract>The NSDictionary representation of the query spec.</Abstract>
+			<DeclaredIn>SFSoupQuerySpec.h</DeclaredIn>			
+			
+			<Declaration>- (NSDictionary *)asDictionary</Declaration>
+			
+			
+			<Anchor>//api/name/asDictionary</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
