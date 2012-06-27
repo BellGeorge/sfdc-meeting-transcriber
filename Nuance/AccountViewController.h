@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSString * accountName;
 @property (weak, nonatomic) IBOutlet UILabel *numberContactsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
 
 - (IBAction)selectContacts:(id)sender;
 - (IBAction)start:(id)sender;

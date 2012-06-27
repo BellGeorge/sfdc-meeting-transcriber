@@ -16,6 +16,7 @@
 @implementation AccountViewController
 @synthesize accountName;
 @synthesize numberContactsLabel;
+@synthesize startButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,11 +37,17 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     numberContactsLabel.text = [NSString stringWithFormat:@"%i contacts",[_appManager.selectedContacts count]];
+    if (_appManager.selectedContacts.count > 0) {
+        startButton.enabled = YES;
+    } else {
+        startButton.enabled = NO;
+    }
 }
 
 - (void)viewDidUnload
 {
     [self setNumberContactsLabel:nil];
+    [self setStartButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

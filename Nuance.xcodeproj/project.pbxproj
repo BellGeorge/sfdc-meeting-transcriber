@@ -74,6 +74,10 @@
 		F36899F2159AEB2400A64A3F /* ico-check.png in Resources */ = {isa = PBXBuildFile; fileRef = F36899F0159AEB2400A64A3F /* ico-check.png */; };
 		F36899F3159AEB2400A64A3F /* ico-check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F36899F1159AEB2400A64A3F /* ico-check@2x.png */; };
 		F36899F7159AEB4000A64A3F /* ContactListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F36899F6159AEB4000A64A3F /* ContactListCell.m */; };
+		F3689A06159B2BC200A64A3F /* RecordMeetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3689A05159B2BC200A64A3F /* RecordMeetingViewController.m */; };
+		F3689A08159B2C8400A64A3F /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3689A07159B2C8400A64A3F /* SpeechKit.framework */; };
+		F3689A0A159B2CA000A64A3F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3689A09159B2CA000A64A3F /* AudioToolbox.framework */; };
+		F3689A0C159B2CB100A64A3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3689A0B159B2CB100A64A3F /* AVFoundation.framework */; };
 		F39FC44D1599F962006D0537 /* AccountsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC44C1599F962006D0537 /* AccountsListViewController.m */; };
 		F39FC457159A07CA006D0537 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC456159A07CA006D0537 /* AccountViewController.m */; };
 		F39FC45A159A0A73006D0537 /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC459159A0A73006D0537 /* ContactsListViewController.m */; };
@@ -315,6 +319,11 @@
 		F36899F1159AEB2400A64A3F /* ico-check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-check@2x.png"; sourceTree = "<group>"; };
 		F36899F5159AEB4000A64A3F /* ContactListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListCell.h; sourceTree = "<group>"; };
 		F36899F6159AEB4000A64A3F /* ContactListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListCell.m; sourceTree = "<group>"; };
+		F3689A04159B2BC200A64A3F /* RecordMeetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordMeetingViewController.h; sourceTree = "<group>"; };
+		F3689A05159B2BC200A64A3F /* RecordMeetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordMeetingViewController.m; sourceTree = "<group>"; };
+		F3689A07159B2C8400A64A3F /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
+		F3689A09159B2CA000A64A3F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F3689A0B159B2CB100A64A3F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F39FC44B1599F962006D0537 /* AccountsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsListViewController.h; sourceTree = "<group>"; };
 		F39FC44C1599F962006D0537 /* AccountsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsListViewController.m; sourceTree = "<group>"; };
 		F39FC455159A07CA006D0537 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
@@ -330,23 +339,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3680D461599E40400EE27D3 /* CoreGraphics.framework in Frameworks */,
+				F3680EAD1599EDFA00EE27D3 /* CFNetwork.framework in Frameworks */,
+				F3689A0C159B2CB100A64A3F /* AVFoundation.framework in Frameworks */,
+				F3689A0A159B2CA000A64A3F /* AudioToolbox.framework in Frameworks */,
 				F3680EB51599EEDE00EE27D3 /* MobileCoreServices.framework in Frameworks */,
 				F3680D421599E40400EE27D3 /* UIKit.framework in Frameworks */,
 				F3680EB31599EE4C00EE27D3 /* SystemConfiguration.framework in Frameworks */,
 				F3680EB11599EE2C00EE27D3 /* libxml2.dylib in Frameworks */,
 				F3680EAF1599EE1A00EE27D3 /* libz.dylib in Frameworks */,
-				F3680EAD1599EDFA00EE27D3 /* CFNetwork.framework in Frameworks */,
 				F3680EAB1599EDE100EE27D3 /* QuartzCore.framework in Frameworks */,
 				F3680EA91599ED2C00EE27D3 /* CoreData.framework in Frameworks */,
 				F3680EA71599ECA000EE27D3 /* Security.framework in Frameworks */,
 				F3680EA51599EBAC00EE27D3 /* libsqlite3.0.dylib in Frameworks */,
 				F3680D441599E40400EE27D3 /* Foundation.framework in Frameworks */,
-				F3680D461599E40400EE27D3 /* CoreGraphics.framework in Frameworks */,
 				F3680E5D1599E5EA00EE27D3 /* libRestKit.a in Frameworks */,
 				F3680E5E1599E5EA00EE27D3 /* libSalesforceOAuth.a in Frameworks */,
 				F3680E5F1599E5EA00EE27D3 /* libSalesforceOAuth.a in Frameworks */,
 				F3680E601599E5EA00EE27D3 /* libSalesforceSDK.a in Frameworks */,
 				F3680E981599E5EB00EE27D3 /* libSalesforceSDK.a in Frameworks */,
+				F3689A08159B2C8400A64A3F /* SpeechKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +401,9 @@
 		F3680D401599E40400EE27D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3689A09159B2CA000A64A3F /* AudioToolbox.framework */,
+				F3689A0B159B2CB100A64A3F /* AVFoundation.framework */,
+				F3689A07159B2C8400A64A3F /* SpeechKit.framework */,
 				F3680EB41599EED900EE27D3 /* MobileCoreServices.framework */,
 				F3680EB21599EE4800EE27D3 /* SystemConfiguration.framework */,
 				F3680EB01599EE2700EE27D3 /* libxml2.dylib */,
@@ -420,6 +435,8 @@
 				F39FC456159A07CA006D0537 /* AccountViewController.m */,
 				F39FC458159A0A73006D0537 /* ContactsListViewController.h */,
 				F39FC459159A0A73006D0537 /* ContactsListViewController.m */,
+				F3689A04159B2BC200A64A3F /* RecordMeetingViewController.h */,
+				F3689A05159B2BC200A64A3F /* RecordMeetingViewController.m */,
 				F3680E991599E64B00EE27D3 /* AppManager.h */,
 				F3680E9A1599E64B00EE27D3 /* AppManager.m */,
 				F36899F5159AEB4000A64A3F /* ContactListCell.h */,
@@ -1049,6 +1066,7 @@
 				F39FC45A159A0A73006D0537 /* ContactsListViewController.m in Sources */,
 				F39FC464159A0BED006D0537 /* NSDictionary+JSON.m in Sources */,
 				F36899F7159AEB4000A64A3F /* ContactListCell.m in Sources */,
+				F3689A06159B2BC200A64A3F /* RecordMeetingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1147,6 +1165,10 @@
 		F3680D711599E40400EE27D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nuance/Nuance-Prefix.pch";
 				INFOPLIST_FILE = "Nuance/Nuance-Info.plist";
@@ -1171,6 +1193,10 @@
 		F3680D721599E40400EE27D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nuance/Nuance-Prefix.pch";
 				INFOPLIST_FILE = "Nuance/Nuance-Info.plist";
