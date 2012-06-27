@@ -35,6 +35,38 @@ const unsigned char SpeechKitApplicationKey[] = {0x4f, 0xd6, 0xf2, 0xc5, 0x30, 0
     _appManager = [AppManager sharedManager];
     timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(updateCountdown) userInfo:nil repeats: YES];
     time = 0;
+    
+    [SpeechKit setupWithID:@"NMDPTRIAL_Isidorey_kyleroche20110302153959"
+                      host:@"sandbox.nmdp.nuancemobility.net"
+                      port:443
+                    useSSL:NO
+                  delegate:nil];
+    
+	// Set earcons to play
+	SKEarcon* earconStart	= [SKEarcon earconWithName:@"earcon_listening.wav"];
+	SKEarcon* earconStop	= [SKEarcon earconWithName:@"earcon_done_listening.wav"];
+	SKEarcon* earconCancel	= [SKEarcon earconWithName:@"earcon_cancel.wav"];
+    [SpeechKit setEarcon:earconStart forType:SKStartRecordingEarconType];
+	[SpeechKit setEarcon:earconStop forType:SKStopRecordingEarconType];
+	[SpeechKit setEarcon:earconCancel forType:SKCancelRecordingEarconType];
+    
+    
+    //start record
+    if (transactionState == TS_IDLE) {
+        SKEndOfSpeechDetection detectionType;
+        NSString* recoType;
+        NSString* langType;
+        
+        transactionState = TS_INITIAL;
+        
+        detectionType = SKNoEndOfSpeechDetection; /* Dictations tend to be long utterances that may include short pauses. */
+        recoType = SKDictationRecognizerType; /* Optimize recognition performance for dictation or message text. */
+        langType = @"en_US";
+        voiceSearch = [[SKRecognizer alloc] initWithType:recoType
+                                               detection:detectionType
+                                                language:langType 
+                                                delegate:self];
+    }
 }
 
 -(void) updateCountdown {
@@ -66,7 +98,8 @@ const unsigned char SpeechKitApplicationKey[] = {0x4f, 0xd6, 0xf2, 0xc5, 0x30, 0
 }
 
 - (IBAction)endButtonClicked:(id)sender {
-    
+    [timer invalidate];
+    [voiceSearch stopRecording];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -97,5 +130,68 @@ const unsigned char SpeechKitApplicationKey[] = {0x4f, 0xd6, 0xf2, 0xc5, 0x30, 0
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
+
+#pragma mark SKRecognizerDelegate methods
+
+- (void)recognizerDidBeginRecording:(SKRecognizer *)recognizer
+{
+    NSLog(@"Recording started.");
+    transactionState = TS_RECORDING;
+
+}
+
+- (void)recognizerDidFinishRecording:(SKRecognizer *)recognizer
+{
+    NSLog(@"Recording finished.");
+    transactionState = TS_PROCESSING;
+
+}
+
+- (void)recognizer:(SKRecognizer *)recognizer didFinishWithResults:(SKRecognition *)results
+{
+    NSLog(@"Got results.");
+    NSLog(@"Session id [%@].", [SpeechKit sessionID]); // for debugging purpose: printing out the speechkit session id 
+    
+    transactionState = TS_IDLE;
+    
+    if (results.suggestion) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Suggestion"
+                                                        message:results.suggestion
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];        
+        [alert show];
+        
+    }
+
+	voiceSearch = nil;
+}
+
+- (void)recognizer:(SKRecognizer *)recognizer didFinishWithError:(NSError *)error suggestion:(NSString *)suggestion
+{
+    NSLog(@"Got error.");
+    NSLog(@"Session id [%@].", [SpeechKit sessionID]); // for debugging purpose: printing out the speechkit session id 
+    
+    transactionState = TS_IDLE;
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:[error localizedDescription]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];        
+    [alert show];
+    
+    if (suggestion) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Suggestion"
+                                                        message:suggestion
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];        
+        [alert show];
+        
+    }
+	voiceSearch = nil;
+}
+
 
 @end

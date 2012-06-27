@@ -78,6 +78,9 @@
 		F3689A08159B2C8400A64A3F /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3689A07159B2C8400A64A3F /* SpeechKit.framework */; };
 		F3689A0A159B2CA000A64A3F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3689A09159B2CA000A64A3F /* AudioToolbox.framework */; };
 		F3689A0C159B2CB100A64A3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3689A0B159B2CB100A64A3F /* AVFoundation.framework */; };
+		F3689A10159B4F3A00A64A3F /* earcon_cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3689A0D159B4F3A00A64A3F /* earcon_cancel.wav */; };
+		F3689A11159B4F3A00A64A3F /* earcon_done_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3689A0E159B4F3A00A64A3F /* earcon_done_listening.wav */; };
+		F3689A12159B4F3A00A64A3F /* earcon_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3689A0F159B4F3A00A64A3F /* earcon_listening.wav */; };
 		F39FC44D1599F962006D0537 /* AccountsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC44C1599F962006D0537 /* AccountsListViewController.m */; };
 		F39FC457159A07CA006D0537 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC456159A07CA006D0537 /* AccountViewController.m */; };
 		F39FC45A159A0A73006D0537 /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC459159A0A73006D0537 /* ContactsListViewController.m */; };
@@ -324,6 +327,9 @@
 		F3689A07159B2C8400A64A3F /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
 		F3689A09159B2CA000A64A3F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F3689A0B159B2CB100A64A3F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F3689A0D159B4F3A00A64A3F /* earcon_cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_cancel.wav; sourceTree = "<group>"; };
+		F3689A0E159B4F3A00A64A3F /* earcon_done_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_done_listening.wav; sourceTree = "<group>"; };
+		F3689A0F159B4F3A00A64A3F /* earcon_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_listening.wav; sourceTree = "<group>"; };
 		F39FC44B1599F962006D0537 /* AccountsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsListViewController.h; sourceTree = "<group>"; };
 		F39FC44C1599F962006D0537 /* AccountsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsListViewController.m; sourceTree = "<group>"; };
 		F39FC455159A07CA006D0537 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
@@ -378,6 +384,9 @@
 		F3680D321599E40400EE27D3 = {
 			isa = PBXGroup;
 			children = (
+				F3689A0D159B4F3A00A64A3F /* earcon_cancel.wav */,
+				F3689A0E159B4F3A00A64A3F /* earcon_done_listening.wav */,
+				F3689A0F159B4F3A00A64A3F /* earcon_listening.wav */,
 				F36899F0159AEB2400A64A3F /* ico-check.png */,
 				F36899F1159AEB2400A64A3F /* ico-check@2x.png */,
 				F39FC44E1599FAFC006D0537 /* Common */,
@@ -1022,6 +1031,9 @@
 				F3680E971599E5EB00EE27D3 /* SFRestDelegate.html in Resources */,
 				F36899F2159AEB2400A64A3F /* ico-check.png in Resources */,
 				F36899F3159AEB2400A64A3F /* ico-check@2x.png in Resources */,
+				F3689A10159B4F3A00A64A3F /* earcon_cancel.wav in Resources */,
+				F3689A11159B4F3A00A64A3F /* earcon_done_listening.wav in Resources */,
+				F3689A12159B4F3A00A64A3F /* earcon_listening.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
