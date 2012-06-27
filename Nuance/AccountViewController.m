@@ -15,6 +15,7 @@
 
 @implementation AccountViewController
 @synthesize accountName;
+@synthesize numberContactsLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,10 +31,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.title = accountName;
+    _appManager = [AppManager sharedManager];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    numberContactsLabel.text = [NSString stringWithFormat:@"%i contacts",[_appManager.selectedContacts count]];
 }
 
 - (void)viewDidUnload
 {
+    [self setNumberContactsLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

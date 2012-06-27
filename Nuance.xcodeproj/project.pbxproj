@@ -71,6 +71,9 @@
 		F3680EB11599EE2C00EE27D3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EB01599EE2700EE27D3 /* libxml2.dylib */; };
 		F3680EB31599EE4C00EE27D3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EB21599EE4800EE27D3 /* SystemConfiguration.framework */; };
 		F3680EB51599EEDE00EE27D3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EB41599EED900EE27D3 /* MobileCoreServices.framework */; };
+		F36899F2159AEB2400A64A3F /* ico-check.png in Resources */ = {isa = PBXBuildFile; fileRef = F36899F0159AEB2400A64A3F /* ico-check.png */; };
+		F36899F3159AEB2400A64A3F /* ico-check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F36899F1159AEB2400A64A3F /* ico-check@2x.png */; };
+		F36899F7159AEB4000A64A3F /* ContactListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F36899F6159AEB4000A64A3F /* ContactListCell.m */; };
 		F39FC44D1599F962006D0537 /* AccountsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC44C1599F962006D0537 /* AccountsListViewController.m */; };
 		F39FC457159A07CA006D0537 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC456159A07CA006D0537 /* AccountViewController.m */; };
 		F39FC45A159A0A73006D0537 /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC459159A0A73006D0537 /* ContactsListViewController.m */; };
@@ -308,6 +311,10 @@
 		F3680EB01599EE2700EE27D3 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		F3680EB21599EE4800EE27D3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F3680EB41599EED900EE27D3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F36899F0159AEB2400A64A3F /* ico-check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-check.png"; sourceTree = "<group>"; };
+		F36899F1159AEB2400A64A3F /* ico-check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-check@2x.png"; sourceTree = "<group>"; };
+		F36899F5159AEB4000A64A3F /* ContactListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListCell.h; sourceTree = "<group>"; };
+		F36899F6159AEB4000A64A3F /* ContactListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListCell.m; sourceTree = "<group>"; };
 		F39FC44B1599F962006D0537 /* AccountsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsListViewController.h; sourceTree = "<group>"; };
 		F39FC44C1599F962006D0537 /* AccountsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsListViewController.m; sourceTree = "<group>"; };
 		F39FC455159A07CA006D0537 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
@@ -359,6 +366,8 @@
 		F3680D321599E40400EE27D3 = {
 			isa = PBXGroup;
 			children = (
+				F36899F0159AEB2400A64A3F /* ico-check.png */,
+				F36899F1159AEB2400A64A3F /* ico-check@2x.png */,
 				F39FC44E1599FAFC006D0537 /* Common */,
 				F3680D471599E40400EE27D3 /* Nuance */,
 				F3680D651599E40400EE27D3 /* NuanceTests */,
@@ -413,6 +422,8 @@
 				F39FC459159A0A73006D0537 /* ContactsListViewController.m */,
 				F3680E991599E64B00EE27D3 /* AppManager.h */,
 				F3680E9A1599E64B00EE27D3 /* AppManager.m */,
+				F36899F5159AEB4000A64A3F /* ContactListCell.h */,
+				F36899F6159AEB4000A64A3F /* ContactListCell.m */,
 				F3680D481599E40400EE27D3 /* Supporting Files */,
 			);
 			path = Nuance;
@@ -992,6 +1003,8 @@
 				F3680E951599E5EB00EE27D3 /* index.html in Resources */,
 				F3680E961599E5EB00EE27D3 /* SFOAuthCoordinatorDelegate.html in Resources */,
 				F3680E971599E5EB00EE27D3 /* SFRestDelegate.html in Resources */,
+				F36899F2159AEB2400A64A3F /* ico-check.png in Resources */,
+				F36899F3159AEB2400A64A3F /* ico-check@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1035,6 +1048,7 @@
 				F39FC457159A07CA006D0537 /* AccountViewController.m in Sources */,
 				F39FC45A159A0A73006D0537 /* ContactsListViewController.m in Sources */,
 				F39FC464159A0BED006D0537 /* NSDictionary+JSON.m in Sources */,
+				F36899F7159AEB4000A64A3F /* ContactListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

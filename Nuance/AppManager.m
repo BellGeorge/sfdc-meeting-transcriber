@@ -9,7 +9,8 @@
 #import "AppManager.h"
 
 @implementation AppManager
-
+@synthesize checkedContacts;
+@synthesize selectedContacts;
 
 
 static AppManager *sharedManager = nil;
@@ -26,7 +27,8 @@ static AppManager *sharedManager = nil;
 -(id)init {
     self = [super init];
     if(self!=nil){
-
+        selectedContacts = [[NSMutableArray alloc] init];
+        checkedContacts = [[NSMutableArray alloc] init];
     }
     return self;
 }

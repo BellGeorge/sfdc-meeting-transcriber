@@ -8,6 +8,7 @@
 
 #import "ContactsListViewController.h"
 #import "NSDictionary+JSON.h"
+#import "ContactListCell.h"
 
 @interface ContactsListViewController ()
 @property (nonatomic, strong) NSString *refreshQuery;
@@ -24,7 +25,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        contactList = [[NSMutableArray alloc] init];
+        
     }
     return self;
 }
@@ -33,8 +34,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _appManager = [AppManager sharedManager];
     SFRestRequest *request = [[SFRestAPI sharedInstance] requestForQuery:[NSString stringWithFormat:@"select id, name, lastname, account.id, account.name, phone, email from contact where account.name = '%@'", account]];
     [[SFRestAPI sharedInstance] send:request delegate:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    contactList = [[NSMutableArray alloc] init];
+    selectedContacts = [[NSMutableArray alloc] initWithArray:_appManager.selectedContacts];
+    checkContacts = [[NSMutableArray alloc] initWithArray:_appManager.checkedContacts];
 }
 
 - (void)viewDidUnload
@@ -50,6 +58,8 @@
 }
 
 - (IBAction)doneClicked:(id)sender {
+    _appManager.checkedContacts = checkContacts;
+    _appManager.selectedContacts = selectedContacts;
     [self dismissModalViewControllerAnimated:YES];
 }
 
@@ -70,13 +80,29 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-	}
-    cell.textLabel.text = [[contactList objectAtIndex:indexPath.row] safeStringForKey:@"Name"];
+	if ([checkContacts count] < [contactList count]) {
+        [checkContacts addObject:@"NO"];
+    }
+	ContactListCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.name.text = [[contactList objectAtIndex:indexPath.row] safeStringForKey:@"Name"];
+    
+    if ([[checkContacts objectAtIndex:indexPath.row] isEqual:@"YES"]) {
+        cell.checkImage.hidden = NO;
+    } else {
+        cell.checkImage.hidden = YES;
+    }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([[checkContacts objectAtIndex:indexPath.row] isEqual:@"YES"]) {
+        [checkContacts replaceObjectAtIndex:indexPath.row withObject:@"NO"];
+        [selectedContacts removeObject:[contactList objectAtIndex:indexPath.row]];
+    } else {
+        [checkContacts replaceObjectAtIndex:indexPath.row withObject:@"YES"];
+        [selectedContacts addObject:[contactList objectAtIndex:indexPath.row]];
+    }
+    [contactsTable reloadData];
 }
 
 #pragma mark - SFDC Request methods

@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppManager.h"
 
 @interface AccountViewController : UIViewController {
-    
+    AppManager *_appManager;
 }
 
 @property (nonatomic, retain) NSString * accountName;
+@property (weak, nonatomic) IBOutlet UILabel *numberContactsLabel;
 
 - (IBAction)selectContacts:(id)sender;
 - (IBAction)start:(id)sender;

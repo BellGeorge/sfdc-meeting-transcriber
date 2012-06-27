@@ -40,6 +40,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _appManager = [AppManager sharedManager];
     self.navigationController.navigationBar.hidden = NO;
     self.refreshQuery = [NSString stringWithFormat:@"select id, name from Account"];
     SFRestRequest *request = [[SFRestAPI sharedInstance] requestForQuery:self.refreshQuery];
@@ -85,6 +86,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [_appManager.selectedContacts removeAllObjects];
+    [_appManager.checkedContacts removeAllObjects];
     selectAccount = [[companies objectAtIndex:indexPath.row] safeStringForKey:@"Name"];
     [self performSegueWithIdentifier:@"accountScreen" sender:self];
 }

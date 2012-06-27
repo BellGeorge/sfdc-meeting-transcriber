@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SFRestAPI.h"
+#import "AppManager.h"
 
 @interface AccountsListViewController : UIViewController <SFRestDelegate, UITableViewDataSource, UITabBarDelegate> {
-    
+     AppManager *_appManager;
 }
 @property (weak, nonatomic) IBOutlet UITableView *accountsTable;
 
