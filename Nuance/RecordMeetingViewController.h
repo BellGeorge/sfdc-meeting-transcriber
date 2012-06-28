@@ -22,6 +22,7 @@
     } transactionState;
     NSTimer *timer;
     int time;
+    NSMutableDictionary * record;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;

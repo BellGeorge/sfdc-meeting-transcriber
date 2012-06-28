@@ -11,6 +11,7 @@
 @implementation AppManager
 @synthesize checkedContacts;
 @synthesize selectedContacts;
+@synthesize records;
 
 
 static AppManager *sharedManager = nil;
@@ -29,6 +30,7 @@ static AppManager *sharedManager = nil;
     if(self!=nil){
         selectedContacts = [[NSMutableArray alloc] init];
         checkedContacts = [[NSMutableArray alloc] init];
+        records = [[NSMutableArray alloc] init];
     }
     return self;
 }

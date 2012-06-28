@@ -33,6 +33,7 @@ const unsigned char SpeechKitApplicationKey[] = {0x4f, 0xd6, 0xf2, 0xc5, 0x30, 0
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     _appManager = [AppManager sharedManager];
+    record = [[NSMutableDictionary alloc] init];
     timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(updateCountdown) userInfo:nil repeats: YES];
     time = 0;
     
@@ -153,7 +154,15 @@ const unsigned char SpeechKitApplicationKey[] = {0x4f, 0xd6, 0xf2, 0xc5, 0x30, 0
     NSLog(@"Session id [%@].", [SpeechKit sessionID]); // for debugging purpose: printing out the speechkit session id 
     
     transactionState = TS_IDLE;
-    
+    long numOfResults = [results.results count];
+    if (numOfResults > 0) {
+        
+        [record setObject:[NSDate date] forKey:@"date"];
+        [record setObject:[results firstResult] forKey:@"text"];
+        [record setObject:[NSString stringWithFormat:@"%i", time] forKey:@"duration"];
+        NSLog(@"Text: %@", record);
+        [_appManager.records addObject:record];
+    }
     if (results.suggestion) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Suggestion"
                                                         message:results.suggestion
