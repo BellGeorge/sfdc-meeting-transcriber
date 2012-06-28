@@ -224,9 +224,91 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Meeting Log" id="WbO-Pq-GFs"/>
+                    <connections>
+                        <segue destination="0UJ-B3-U03" kind="push" identifier="detailsScreen" id="Zoq-R7-uvJ"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="2175" y="689"/>
+        </scene>
+        <!--Details And Transcript View Controller - Details-->
+        <scene sceneID="34u-Mv-JhR">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCW-Ck-a6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="0UJ-B3-U03" customClass="DetailsAndTranscriptViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uz8-fL-ZJ8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="QIc-p2-ZBm">
+                                <rect key="frame" x="17" y="97" width="287" height="227"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nkT-CT-WZ5">
+                                <rect key="frame" x="124" y="354" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="POST">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButtonClicked:" destination="0UJ-B3-U03" eventType="touchUpInside" id="uvB-lj-30h"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="aIx-fc-PBM">
+                                <rect key="frame" x="20" y="10" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Duration:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="n1C-8d-2CT">
+                                <rect key="frame" x="20" y="39" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Transcript:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="mDy-TX-r2h">
+                                <rect key="frame" x="20" y="68" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tjf-WL-vgq">
+                                <rect key="frame" x="66" y="10" width="234" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="08D-sa-CJl">
+                                <rect key="frame" x="94" y="39" width="206" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="gP1-MH-oKH"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="tjf-WL-vgq" id="6bk-Dl-7c3"/>
+                        <outlet property="durationLabel" destination="08D-sa-CJl" id="jXY-8j-YLe"/>
+                        <outlet property="transcriptView" destination="QIc-p2-ZBm" id="dYz-iN-fMs"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2674" y="689"/>
         </scene>
         <!--Contacts List View Controller-->
         <scene sceneID="8bc-X9-KMa">
@@ -330,6 +412,15 @@
             <relationships>
                 <relationship kind="action" name="doneClicked:"/>
                 <relationship kind="outlet" name="contactsTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="DetailsAndTranscriptViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailsAndTranscriptViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="postButtonClicked:"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="durationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="transcriptView" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="MeetingLogTableViewController" superclassName="UITableViewController">

@@ -7,6 +7,7 @@
 //
 
 #import "MeetingLogTableViewController.h"
+#import "DetailsAndTranscriptViewController.h"
 
 @interface MeetingLogTableViewController ()
 
@@ -66,7 +67,6 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMM dd, yyyy K:mm:ss a"];
-   // NSDate *date = [dateFormatter dateFromString:[[rec objectForKey:@"date"] stringValue]];
     cell.textLabel.text = [NSString stringWithFormat:@"Date: %@", [dateFormatter stringFromDate:[rec objectForKey:@"date"]]];
     
     int hours, minutes, seconds;
@@ -85,7 +85,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    selectRec = [_appManager.records objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"detailsScreen" sender:self];
+}
 
+#pragma mark - Segue support
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([segue.identifier isEqualToString:@"detailsScreen"]) {
+        DetailsAndTranscriptViewController *datvc = (DetailsAndTranscriptViewController*)segue.destinationViewController;
+        datvc.record = selectRec;
+        
+    }
 }
 
 @end

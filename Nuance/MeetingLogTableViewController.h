@@ -11,6 +11,7 @@
 
 @interface MeetingLogTableViewController : UITableViewController {
     AppManager *_appManager;
+    NSDictionary * selectRec;
 }
 
 @end
