@@ -161,7 +161,8 @@ const unsigned char SpeechKitApplicationKey[] = {0x4f, 0xd6, 0xf2, 0xc5, 0x30, 0
         [record setObject:[results firstResult] forKey:@"text"];
         [record setObject:[NSString stringWithFormat:@"%i", time] forKey:@"duration"];
         NSLog(@"Text: %@", record);
-        [_appManager.records addObject:record];
+        [_appManager.records insertObject:record atIndex:0];
+        [self performSegueWithIdentifier:@"meetingLogScreen" sender:self];
     }
     if (results.suggestion) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Suggestion"

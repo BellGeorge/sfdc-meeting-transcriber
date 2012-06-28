@@ -86,6 +86,7 @@
 		F39FC45A159A0A73006D0537 /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC459159A0A73006D0537 /* ContactsListViewController.m */; };
 		F39FC464159A0BED006D0537 /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC463159A0BED006D0537 /* NSDictionary+JSON.m */; };
 		F39FC465159A0BED006D0537 /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC463159A0BED006D0537 /* NSDictionary+JSON.m */; };
+		F3C914C2159C8A9D00D3DA0B /* MeetingLogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C914C1159C8A9D00D3DA0B /* MeetingLogTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,6 +339,8 @@
 		F39FC459159A0A73006D0537 /* ContactsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsListViewController.m; sourceTree = "<group>"; };
 		F39FC462159A0BED006D0537 /* NSDictionary+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JSON.h"; path = "Nuance/Common/NSDictionary+JSON.h"; sourceTree = "<group>"; };
 		F39FC463159A0BED006D0537 /* NSDictionary+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JSON.m"; path = "Nuance/Common/NSDictionary+JSON.m"; sourceTree = "<group>"; };
+		F3C914C0159C8A9D00D3DA0B /* MeetingLogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingLogTableViewController.h; sourceTree = "<group>"; };
+		F3C914C1159C8A9D00D3DA0B /* MeetingLogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingLogTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -446,6 +449,8 @@
 				F39FC459159A0A73006D0537 /* ContactsListViewController.m */,
 				F3689A04159B2BC200A64A3F /* RecordMeetingViewController.h */,
 				F3689A05159B2BC200A64A3F /* RecordMeetingViewController.m */,
+				F3C914C0159C8A9D00D3DA0B /* MeetingLogTableViewController.h */,
+				F3C914C1159C8A9D00D3DA0B /* MeetingLogTableViewController.m */,
 				F3680E991599E64B00EE27D3 /* AppManager.h */,
 				F3680E9A1599E64B00EE27D3 /* AppManager.m */,
 				F36899F5159AEB4000A64A3F /* ContactListCell.h */,
@@ -1079,6 +1084,7 @@
 				F39FC464159A0BED006D0537 /* NSDictionary+JSON.m in Sources */,
 				F36899F7159AEB4000A64A3F /* ContactListCell.m in Sources */,
 				F3689A06159B2BC200A64A3F /* RecordMeetingViewController.m in Sources */,
+				F3C914C2159C8A9D00D3DA0B /* MeetingLogTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
