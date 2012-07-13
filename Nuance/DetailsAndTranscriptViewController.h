@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 @property (weak, nonatomic) IBOutlet UITextView *transcriptView;
 @property (nonatomic, retain) NSDictionary * record;
+@property (nonatomic) BOOL newRec;
+@property (weak, nonatomic) IBOutlet UIButton *postButton;
 
 - (IBAction)postButtonClicked:(id)sender;
 @end

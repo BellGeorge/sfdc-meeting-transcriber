@@ -156,8 +156,9 @@ const unsigned char SpeechKitApplicationKey[] = {0x4f, 0xd6, 0xf2, 0xc5, 0x30, 0
     transactionState = TS_IDLE;
     long numOfResults = [results.results count];
     if (numOfResults > 0) {
-        
-        [record setObject:[NSDate date] forKey:@"date__c"];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MMM dd, yyyy K:mm:ss a"];
+        [record setObject:[dateFormatter stringFromDate:[NSDate date]] forKey:@"date__c"];
         [record setObject:[results firstResult] forKey:@"text__c"];
         [record setObject:[NSString stringWithFormat:@"%i", time] forKey:@"duration__c"];
         [record setObject:_appManager.accountId forKey:@"Account__c"];

@@ -64,10 +64,8 @@
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
 	}
     NSDictionary * rec = [_appManager.records objectAtIndex:indexPath.row];
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MMM dd, yyyy K:mm:ss a"];
-    cell.textLabel.text = [NSString stringWithFormat:@"Date: %@", [dateFormatter stringFromDate:[rec objectForKey:@"date__c"]]];
+
+    cell.textLabel.text = [NSString stringWithFormat:@"Date: %@", [rec objectForKey:@"date__c"]];
     
     int hours, minutes, seconds;
     int time = [[rec objectForKey:@"duration__c"] intValue];
@@ -95,7 +93,7 @@
     if([segue.identifier isEqualToString:@"detailsScreen"]) {
         DetailsAndTranscriptViewController *datvc = (DetailsAndTranscriptViewController*)segue.destinationViewController;
         datvc.record = selectRec;
-        
+        datvc.newRec = YES;
     }
 }
 

@@ -17,6 +17,8 @@
 @synthesize durationLabel;
 @synthesize transcriptView;
 @synthesize record;
+@synthesize newRec;
+@synthesize postButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,10 +34,7 @@
     [super viewDidLoad];
     _appManager = [AppManager sharedManager];
 	// Do any additional setup after loading the view.
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MMM dd, yyyy K:mm:ss a"];
-    dateLabel.text = [dateFormatter stringFromDate:[record objectForKey:@"date__c"]];
-    [record setValue:dateLabel.text forKey:@"date__c"];
+    dateLabel.text = [record objectForKey:@"date__c"];
     int hours, minutes, seconds;
     int time = [[record objectForKey:@"duration__c"] intValue];
     hours = time / 3600;
@@ -45,11 +44,19 @@
     transcriptView.text = [record objectForKey:@"text__c"];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    if (newRec) {
+        postButton.hidden = NO;
+    } else {
+        postButton.hidden = YES;
+    }
+}
 - (void)viewDidUnload
 {
     [self setDateLabel:nil];
     [self setDurationLabel:nil];
     [self setTranscriptView:nil];
+    [self setPostButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

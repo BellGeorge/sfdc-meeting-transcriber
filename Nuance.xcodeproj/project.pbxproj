@@ -81,6 +81,7 @@
 		F3689A10159B4F3A00A64A3F /* earcon_cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3689A0D159B4F3A00A64A3F /* earcon_cancel.wav */; };
 		F3689A11159B4F3A00A64A3F /* earcon_done_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3689A0E159B4F3A00A64A3F /* earcon_done_listening.wav */; };
 		F3689A12159B4F3A00A64A3F /* earcon_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3689A0F159B4F3A00A64A3F /* earcon_listening.wav */; };
+		F38E86F015B0A99400DCDD76 /* TranscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38E86EF15B0A99400DCDD76 /* TranscriptionsViewController.m */; };
 		F39FC44D1599F962006D0537 /* AccountsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC44C1599F962006D0537 /* AccountsListViewController.m */; };
 		F39FC457159A07CA006D0537 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC456159A07CA006D0537 /* AccountViewController.m */; };
 		F39FC45A159A0A73006D0537 /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39FC459159A0A73006D0537 /* ContactsListViewController.m */; };
@@ -332,6 +333,8 @@
 		F3689A0D159B4F3A00A64A3F /* earcon_cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_cancel.wav; sourceTree = "<group>"; };
 		F3689A0E159B4F3A00A64A3F /* earcon_done_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_done_listening.wav; sourceTree = "<group>"; };
 		F3689A0F159B4F3A00A64A3F /* earcon_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_listening.wav; sourceTree = "<group>"; };
+		F38E86EE15B0A99300DCDD76 /* TranscriptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranscriptionsViewController.h; sourceTree = "<group>"; };
+		F38E86EF15B0A99400DCDD76 /* TranscriptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranscriptionsViewController.m; sourceTree = "<group>"; };
 		F39FC44B1599F962006D0537 /* AccountsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsListViewController.h; sourceTree = "<group>"; };
 		F39FC44C1599F962006D0537 /* AccountsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsListViewController.m; sourceTree = "<group>"; };
 		F39FC455159A07CA006D0537 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
@@ -456,6 +459,8 @@
 				F3C914C1159C8A9D00D3DA0B /* MeetingLogTableViewController.m */,
 				F3C914C8159C98C300D3DA0B /* DetailsAndTranscriptViewController.h */,
 				F3C914C9159C98C300D3DA0B /* DetailsAndTranscriptViewController.m */,
+				F38E86EE15B0A99300DCDD76 /* TranscriptionsViewController.h */,
+				F38E86EF15B0A99400DCDD76 /* TranscriptionsViewController.m */,
 				F3680E991599E64B00EE27D3 /* AppManager.h */,
 				F3680E9A1599E64B00EE27D3 /* AppManager.m */,
 				F36899F5159AEB4000A64A3F /* ContactListCell.h */,
@@ -1091,6 +1096,7 @@
 				F3689A06159B2BC200A64A3F /* RecordMeetingViewController.m in Sources */,
 				F3C914C2159C8A9D00D3DA0B /* MeetingLogTableViewController.m in Sources */,
 				F3C914CA159C98C300D3DA0B /* DetailsAndTranscriptViewController.m in Sources */,
+				F38E86F015B0A99400DCDD76 /* TranscriptionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
