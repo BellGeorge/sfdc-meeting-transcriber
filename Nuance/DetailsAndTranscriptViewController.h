@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AppManager.h"
+#import "SFRestAPI.h"
 
-@interface DetailsAndTranscriptViewController : UIViewController {
+@interface DetailsAndTranscriptViewController : UIViewController <SFRestDelegate> {
     AppManager *_appManager;
 }
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;

@@ -15,6 +15,7 @@
 @property (nonatomic, retain) NSMutableArray * selectedContacts;
 @property (nonatomic, retain) NSMutableArray * checkedContacts;
 @property (nonatomic, retain) NSMutableArray * records;
+@property (nonatomic, retain) NSString * accountId;
 
 
 + (id)sharedManager;

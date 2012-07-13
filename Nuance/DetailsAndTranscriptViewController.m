@@ -34,14 +34,15 @@
 	// Do any additional setup after loading the view.
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMM dd, yyyy K:mm:ss a"];
-    dateLabel.text = [dateFormatter stringFromDate:[record objectForKey:@"date"]];
+    dateLabel.text = [dateFormatter stringFromDate:[record objectForKey:@"date__c"]];
+    [record setValue:dateLabel.text forKey:@"date__c"];
     int hours, minutes, seconds;
-    int time = [[record objectForKey:@"duration"] intValue];
+    int time = [[record objectForKey:@"duration__c"] intValue];
     hours = time / 3600;
     minutes = (time % 3600) / 60;
     seconds = (time %3600) % 60;
     durationLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
-    transcriptView.text = [record objectForKey:@"text"];
+    transcriptView.text = [record objectForKey:@"text__c"];
 }
 
 - (void)viewDidUnload
@@ -59,7 +60,36 @@
 }
 
 - (IBAction)postButtonClicked:(id)sender {
+    SFRestRequest *request = [[SFRestAPI sharedInstance] requestForCreateWithObjectType:@"Transcription__c" fields:record];
+    [[SFRestAPI sharedInstance] send:request delegate:self];
 }
+
+#pragma mark - SFDC Request methods
+- (void)request:(SFRestRequest *)request didLoadResponse:(id)jsonResponse {
+    
+    NSDictionary *dict = (NSDictionary *)jsonResponse;
+    NSLog(@"Request: %@ | %@", request.path, request.queryParams);
+    NSLog(@"Query: %@", [request.queryParams objectForKey:@"q"]);
+
+    NSLog(@"Response: %@", dict);
+    
+}
+
+- (void)request:(SFRestRequest*)request didFailLoadWithError:(NSError*)error {
+    // handle error
+    NSLog(@"ERROR");
+}
+
+- (void)requestDidCancelLoad:(SFRestRequest *)request {
+    // handle error
+    NSLog(@"CANCEL");
+}
+
+- (void)requestDidTimeout:(SFRestRequest *)request {
+    // handle error
+    NSLog(@"TIMEOUT");
+}
+
 
 
 @end

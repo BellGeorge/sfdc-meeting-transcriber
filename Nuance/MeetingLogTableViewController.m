@@ -67,10 +67,10 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMM dd, yyyy K:mm:ss a"];
-    cell.textLabel.text = [NSString stringWithFormat:@"Date: %@", [dateFormatter stringFromDate:[rec objectForKey:@"date"]]];
+    cell.textLabel.text = [NSString stringWithFormat:@"Date: %@", [dateFormatter stringFromDate:[rec objectForKey:@"date__c"]]];
     
     int hours, minutes, seconds;
-    int time = [[rec objectForKey:@"duration"] intValue];
+    int time = [[rec objectForKey:@"duration__c"] intValue];
     hours = time / 3600;
     minutes = (time % 3600) / 60;
     seconds = (time %3600) % 60;

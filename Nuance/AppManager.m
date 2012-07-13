@@ -12,6 +12,7 @@
 @synthesize checkedContacts;
 @synthesize selectedContacts;
 @synthesize records;
+@synthesize accountId;
 
 
 static AppManager *sharedManager = nil;

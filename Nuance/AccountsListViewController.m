@@ -88,6 +88,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [_appManager.selectedContacts removeAllObjects];
     [_appManager.checkedContacts removeAllObjects];
+    _appManager.accountId = [[companies objectAtIndex:indexPath.row] safeStringForKey:@"Id"];
     selectAccount = [[companies objectAtIndex:indexPath.row] safeStringForKey:@"Name"];
     [self performSegueWithIdentifier:@"accountScreen" sender:self];
 }

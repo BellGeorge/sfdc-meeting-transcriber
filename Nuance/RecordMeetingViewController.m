@@ -157,9 +157,10 @@ const unsigned char SpeechKitApplicationKey[] = {0x4f, 0xd6, 0xf2, 0xc5, 0x30, 0
     long numOfResults = [results.results count];
     if (numOfResults > 0) {
         
-        [record setObject:[NSDate date] forKey:@"date"];
-        [record setObject:[results firstResult] forKey:@"text"];
-        [record setObject:[NSString stringWithFormat:@"%i", time] forKey:@"duration"];
+        [record setObject:[NSDate date] forKey:@"date__c"];
+        [record setObject:[results firstResult] forKey:@"text__c"];
+        [record setObject:[NSString stringWithFormat:@"%i", time] forKey:@"duration__c"];
+        [record setObject:_appManager.accountId forKey:@"Account__c"];
         NSLog(@"Text: %@", record);
         [_appManager.records insertObject:record atIndex:0];
         [self performSegueWithIdentifier:@"meetingLogScreen" sender:self];
