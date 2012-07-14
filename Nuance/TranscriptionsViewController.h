@@ -10,10 +10,13 @@
 #import "SFRestAPI.h"
 #import "AppManager.h"
 
-@interface TranscriptionsViewController : UITableViewController <SFRestDelegate> {
+@interface TranscriptionsViewController : UITableViewController <SFRestDelegate, UISearchBarDelegate> {
     AppManager *_appManager;
     NSMutableArray * transcriptionsArray;
+    NSMutableArray * searchArray;
+    NSMutableArray * currentTranscriptionsArray;
     NSDictionary * selectRec;
+    NSString * searchText;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *transcriptionsTable;

@@ -32,6 +32,8 @@
     [super viewDidLoad];
     _appManager = [AppManager sharedManager];
     transcriptionsArray = [[NSMutableArray alloc] init];
+    searchArray = [[NSMutableArray alloc] init];
+    currentTranscriptionsArray = transcriptionsArray;
     NSString * refreshQuery = [NSString stringWithFormat:@"select date__c, duration__c, text__c from Transcription__c where Account__c = '%@'",_appManager.accountId];
     SFRestRequest *request = [[SFRestAPI sharedInstance] requestForQuery:refreshQuery];
     [[SFRestAPI sharedInstance] send:request delegate:self];
@@ -47,6 +49,7 @@
     NSMutableArray *firstResult = [NSMutableArray arrayWithArray:[dict arrayForKey:@"records"]];
     if (firstResult && firstResult.count > 0) {
         transcriptionsArray = firstResult;
+        currentTranscriptionsArray = transcriptionsArray;
         [transcriptionsTable reloadData];
 
     }
@@ -94,7 +97,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return transcriptionsArray.count;
+    return currentTranscriptionsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,7 +107,7 @@
     if (cell == nil) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
 	}
-    cell.textLabel.text = [[transcriptionsArray objectAtIndex:indexPath.row] safeStringForKey:@"text__c"];
+    cell.textLabel.text = [[currentTranscriptionsArray objectAtIndex:indexPath.row] safeStringForKey:@"text__c"];
     return cell;
 }
 
@@ -113,7 +116,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    selectRec = [transcriptionsArray objectAtIndex:indexPath.row];
+    [searchBar resignFirstResponder];
+    selectRec = [currentTranscriptionsArray objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"detailsScreen" sender:self];
 }
 
@@ -125,6 +129,40 @@
         datvc.record = selectRec;
         datvc.newRec = NO;
     }
+}
+
+#pragma mark - Search
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchB
+{
+	[searchB resignFirstResponder];
+}
+
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)theSearchBar {
+
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)theSearchBar {
+
+}
+
+- (void)searchBar:(UISearchBar *)theSearchBar textDidChange:(NSString *)text {
+    searchText = text;
+
+    if ([searchText length] > 0) {
+        [searchArray removeAllObjects];
+        for (int i=0; i<[transcriptionsArray count]; i++) {
+            NSDictionary * transcript = [transcriptionsArray objectAtIndex:i];
+            NSLog(@"Dict: %@",transcript);
+            if([[[transcript objectForKey:@"text__c"] lowercaseString] rangeOfString: [searchText lowercaseString]].location != NSNotFound) {
+                [searchArray addObject:transcript];
+            }
+        }
+            NSLog(@"Search: %@", searchArray);
+        currentTranscriptionsArray = searchArray;
+        [transcriptionsTable reloadData];
+    }
+    
 }
 
 @end
