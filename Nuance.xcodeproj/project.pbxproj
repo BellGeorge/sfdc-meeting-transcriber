@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F323BAFC15B740FB00D78B0E /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F323BAFB15B740FA00D78B0E /* libsqlite3.0.dylib */; };
 		F3680D421599E40400EE27D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680D411599E40400EE27D3 /* UIKit.framework */; };
 		F3680D441599E40400EE27D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680D431599E40400EE27D3 /* Foundation.framework */; };
 		F3680D461599E40400EE27D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680D451599E40400EE27D3 /* CoreGraphics.framework */; };
@@ -24,51 +25,13 @@
 		F3680E5E1599E5EA00EE27D3 /* libSalesforceOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680DE21599E5EA00EE27D3 /* libSalesforceOAuth.a */; };
 		F3680E5F1599E5EA00EE27D3 /* libSalesforceOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680DE71599E5EA00EE27D3 /* libSalesforceOAuth.a */; };
 		F3680E601599E5EA00EE27D3 /* libSalesforceSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680DF81599E5EA00EE27D3 /* libSalesforceSDK.a */; };
-		F3680E611599E5EB00EE27D3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3680DFD1599E5EA00EE27D3 /* Info.plist */; };
-		F3680E761599E5EB00EE27D3 /* Nodes.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E191599E5EA00EE27D3 /* Nodes.xml */; };
-		F3680E771599E5EB00EE27D3 /* Tokens1.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E1A1599E5EA00EE27D3 /* Tokens1.xml */; };
-		F3680E781599E5EB00EE27D3 /* Tokens10.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E1B1599E5EA00EE27D3 /* Tokens10.xml */; };
-		F3680E791599E5EB00EE27D3 /* Tokens11.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E1C1599E5EA00EE27D3 /* Tokens11.xml */; };
-		F3680E7A1599E5EB00EE27D3 /* Tokens12.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E1D1599E5EA00EE27D3 /* Tokens12.xml */; };
-		F3680E7B1599E5EB00EE27D3 /* Tokens13.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E1E1599E5EA00EE27D3 /* Tokens13.xml */; };
-		F3680E7C1599E5EB00EE27D3 /* Tokens2.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E1F1599E5EA00EE27D3 /* Tokens2.xml */; };
-		F3680E7D1599E5EB00EE27D3 /* Tokens3.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E201599E5EA00EE27D3 /* Tokens3.xml */; };
-		F3680E7E1599E5EB00EE27D3 /* Tokens4.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E211599E5EA00EE27D3 /* Tokens4.xml */; };
-		F3680E7F1599E5EB00EE27D3 /* Tokens5.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E221599E5EA00EE27D3 /* Tokens5.xml */; };
-		F3680E801599E5EB00EE27D3 /* Tokens6.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E231599E5EA00EE27D3 /* Tokens6.xml */; };
-		F3680E811599E5EB00EE27D3 /* Tokens7.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E241599E5EA00EE27D3 /* Tokens7.xml */; };
-		F3680E821599E5EB00EE27D3 /* Tokens8.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E251599E5EA00EE27D3 /* Tokens8.xml */; };
-		F3680E831599E5EB00EE27D3 /* Tokens9.xml in Resources */ = {isa = PBXBuildFile; fileRef = F3680E261599E5EA00EE27D3 /* Tokens9.xml */; };
-		F3680E841599E5EB00EE27D3 /* NSDictionary(NullHandling).html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E291599E5EA00EE27D3 /* NSDictionary(NullHandling).html */; };
-		F3680E851599E5EB00EE27D3 /* FMDatabase.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E2B1599E5EA00EE27D3 /* FMDatabase.html */; };
-		F3680E861599E5EB00EE27D3 /* SFJsonUtils.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E2C1599E5EA00EE27D3 /* SFJsonUtils.html */; };
-		F3680E871599E5EB00EE27D3 /* SFOAuthCoordinator.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E2D1599E5EA00EE27D3 /* SFOAuthCoordinator.html */; };
-		F3680E881599E5EB00EE27D3 /* SFOAuthCredentials.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E2E1599E5EA00EE27D3 /* SFOAuthCredentials.html */; };
-		F3680E891599E5EB00EE27D3 /* SFRestAPI.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E2F1599E5EA00EE27D3 /* SFRestAPI.html */; };
-		F3680E8A1599E5EB00EE27D3 /* SFRestRequest.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E301599E5EA00EE27D3 /* SFRestRequest.html */; };
-		F3680E8B1599E5EB00EE27D3 /* SFSmartStore.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E311599E5EA00EE27D3 /* SFSmartStore.html */; };
-		F3680E8C1599E5EB00EE27D3 /* SFSoupCursor.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E321599E5EA00EE27D3 /* SFSoupCursor.html */; };
-		F3680E8D1599E5EB00EE27D3 /* SFSoupIndex.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E331599E5EA00EE27D3 /* SFSoupIndex.html */; };
-		F3680E8E1599E5EB00EE27D3 /* SFSoupQuerySpec.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E341599E5EA00EE27D3 /* SFSoupQuerySpec.html */; };
-		F3680E8F1599E5EB00EE27D3 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = F3680E361599E5EA00EE27D3 /* styles.css */; };
-		F3680E901599E5EB00EE27D3 /* hierarchy.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E371599E5EA00EE27D3 /* hierarchy.html */; };
-		F3680E911599E5EB00EE27D3 /* button_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = F3680E391599E5EA00EE27D3 /* button_bar_background.png */; };
-		F3680E921599E5EB00EE27D3 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = F3680E3A1599E5EA00EE27D3 /* disclosure.png */; };
-		F3680E931599E5EB00EE27D3 /* disclosure_open.png in Resources */ = {isa = PBXBuildFile; fileRef = F3680E3B1599E5EA00EE27D3 /* disclosure_open.png */; };
-		F3680E941599E5EB00EE27D3 /* title_background.png in Resources */ = {isa = PBXBuildFile; fileRef = F3680E3C1599E5EA00EE27D3 /* title_background.png */; };
-		F3680E951599E5EB00EE27D3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E3D1599E5EA00EE27D3 /* index.html */; };
-		F3680E961599E5EB00EE27D3 /* SFOAuthCoordinatorDelegate.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E3F1599E5EA00EE27D3 /* SFOAuthCoordinatorDelegate.html */; };
-		F3680E971599E5EB00EE27D3 /* SFRestDelegate.html in Resources */ = {isa = PBXBuildFile; fileRef = F3680E401599E5EA00EE27D3 /* SFRestDelegate.html */; };
 		F3680E981599E5EB00EE27D3 /* libSalesforceSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680E501599E5EA00EE27D3 /* libSalesforceSDK.a */; };
 		F3680E9B1599E64B00EE27D3 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3680E9A1599E64B00EE27D3 /* AppManager.m */; };
 		F3680EA21599E71900EE27D3 /* RDRest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3680EA11599E71800EE27D3 /* RDRest.m */; };
-		F3680EA51599EBAC00EE27D3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EA41599EBAC00EE27D3 /* libsqlite3.0.dylib */; };
 		F3680EA71599ECA000EE27D3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EA61599ECA000EE27D3 /* Security.framework */; };
 		F3680EA91599ED2C00EE27D3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EA81599ED2B00EE27D3 /* CoreData.framework */; };
 		F3680EAB1599EDE100EE27D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EAA1599EDDB00EE27D3 /* QuartzCore.framework */; };
 		F3680EAD1599EDFA00EE27D3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EAC1599EDF600EE27D3 /* CFNetwork.framework */; };
-		F3680EAF1599EE1A00EE27D3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EAE1599EE1500EE27D3 /* libz.dylib */; };
-		F3680EB11599EE2C00EE27D3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EB01599EE2700EE27D3 /* libxml2.dylib */; };
 		F3680EB31599EE4C00EE27D3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EB21599EE4800EE27D3 /* SystemConfiguration.framework */; };
 		F3680EB51599EEDE00EE27D3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3680EB41599EED900EE27D3 /* MobileCoreServices.framework */; };
 		F36899F2159AEB2400A64A3F /* ico-check.png in Resources */ = {isa = PBXBuildFile; fileRef = F36899F0159AEB2400A64A3F /* ico-check.png */; };
@@ -102,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F323BAFB15B740FA00D78B0E /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		F3680D3D1599E40400EE27D3 /* Nuance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nuance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3680D411599E40400EE27D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F3680D431599E40400EE27D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -229,61 +193,6 @@
 		F3680DF61599E5EA00EE27D3 /* SFSoupIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSoupIndex.h; sourceTree = "<group>"; };
 		F3680DF71599E5EA00EE27D3 /* SFSoupQuerySpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSoupQuerySpec.h; sourceTree = "<group>"; };
 		F3680DF81599E5EA00EE27D3 /* libSalesforceSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSalesforceSDK.a; sourceTree = "<group>"; };
-		F3680DFD1599E5EA00EE27D3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3680E011599E5EA00EE27D3 /* NSDictionary(NullHandling).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = "NSDictionary(NullHandling).html"; sourceTree = "<group>"; };
-		F3680E031599E5EA00EE27D3 /* FMDatabase.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = FMDatabase.html; sourceTree = "<group>"; };
-		F3680E041599E5EA00EE27D3 /* SFJsonUtils.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFJsonUtils.html; sourceTree = "<group>"; };
-		F3680E051599E5EA00EE27D3 /* SFOAuthCoordinator.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFOAuthCoordinator.html; sourceTree = "<group>"; };
-		F3680E061599E5EA00EE27D3 /* SFOAuthCredentials.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFOAuthCredentials.html; sourceTree = "<group>"; };
-		F3680E071599E5EA00EE27D3 /* SFRestAPI.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFRestAPI.html; sourceTree = "<group>"; };
-		F3680E081599E5EA00EE27D3 /* SFRestRequest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFRestRequest.html; sourceTree = "<group>"; };
-		F3680E091599E5EA00EE27D3 /* SFSmartStore.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFSmartStore.html; sourceTree = "<group>"; };
-		F3680E0A1599E5EA00EE27D3 /* SFSoupCursor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFSoupCursor.html; sourceTree = "<group>"; };
-		F3680E0B1599E5EA00EE27D3 /* SFSoupIndex.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFSoupIndex.html; sourceTree = "<group>"; };
-		F3680E0C1599E5EA00EE27D3 /* SFSoupQuerySpec.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFSoupQuerySpec.html; sourceTree = "<group>"; };
-		F3680E0E1599E5EA00EE27D3 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
-		F3680E0F1599E5EA00EE27D3 /* hierarchy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = hierarchy.html; sourceTree = "<group>"; };
-		F3680E111599E5EA00EE27D3 /* button_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bar_background.png; sourceTree = "<group>"; };
-		F3680E121599E5EA00EE27D3 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
-		F3680E131599E5EA00EE27D3 /* disclosure_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_open.png; sourceTree = "<group>"; };
-		F3680E141599E5EA00EE27D3 /* title_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_background.png; sourceTree = "<group>"; };
-		F3680E151599E5EA00EE27D3 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = index.html; sourceTree = "<group>"; };
-		F3680E171599E5EA00EE27D3 /* SFOAuthCoordinatorDelegate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFOAuthCoordinatorDelegate.html; sourceTree = "<group>"; };
-		F3680E181599E5EA00EE27D3 /* SFRestDelegate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFRestDelegate.html; sourceTree = "<group>"; };
-		F3680E191599E5EA00EE27D3 /* Nodes.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Nodes.xml; sourceTree = "<group>"; };
-		F3680E1A1599E5EA00EE27D3 /* Tokens1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens1.xml; sourceTree = "<group>"; };
-		F3680E1B1599E5EA00EE27D3 /* Tokens10.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens10.xml; sourceTree = "<group>"; };
-		F3680E1C1599E5EA00EE27D3 /* Tokens11.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens11.xml; sourceTree = "<group>"; };
-		F3680E1D1599E5EA00EE27D3 /* Tokens12.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens12.xml; sourceTree = "<group>"; };
-		F3680E1E1599E5EA00EE27D3 /* Tokens13.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens13.xml; sourceTree = "<group>"; };
-		F3680E1F1599E5EA00EE27D3 /* Tokens2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens2.xml; sourceTree = "<group>"; };
-		F3680E201599E5EA00EE27D3 /* Tokens3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens3.xml; sourceTree = "<group>"; };
-		F3680E211599E5EA00EE27D3 /* Tokens4.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens4.xml; sourceTree = "<group>"; };
-		F3680E221599E5EA00EE27D3 /* Tokens5.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens5.xml; sourceTree = "<group>"; };
-		F3680E231599E5EA00EE27D3 /* Tokens6.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens6.xml; sourceTree = "<group>"; };
-		F3680E241599E5EA00EE27D3 /* Tokens7.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens7.xml; sourceTree = "<group>"; };
-		F3680E251599E5EA00EE27D3 /* Tokens8.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens8.xml; sourceTree = "<group>"; };
-		F3680E261599E5EA00EE27D3 /* Tokens9.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tokens9.xml; sourceTree = "<group>"; };
-		F3680E291599E5EA00EE27D3 /* NSDictionary(NullHandling).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = "NSDictionary(NullHandling).html"; sourceTree = "<group>"; };
-		F3680E2B1599E5EA00EE27D3 /* FMDatabase.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = FMDatabase.html; sourceTree = "<group>"; };
-		F3680E2C1599E5EA00EE27D3 /* SFJsonUtils.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFJsonUtils.html; sourceTree = "<group>"; };
-		F3680E2D1599E5EA00EE27D3 /* SFOAuthCoordinator.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFOAuthCoordinator.html; sourceTree = "<group>"; };
-		F3680E2E1599E5EA00EE27D3 /* SFOAuthCredentials.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFOAuthCredentials.html; sourceTree = "<group>"; };
-		F3680E2F1599E5EA00EE27D3 /* SFRestAPI.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFRestAPI.html; sourceTree = "<group>"; };
-		F3680E301599E5EA00EE27D3 /* SFRestRequest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFRestRequest.html; sourceTree = "<group>"; };
-		F3680E311599E5EA00EE27D3 /* SFSmartStore.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFSmartStore.html; sourceTree = "<group>"; };
-		F3680E321599E5EA00EE27D3 /* SFSoupCursor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFSoupCursor.html; sourceTree = "<group>"; };
-		F3680E331599E5EA00EE27D3 /* SFSoupIndex.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFSoupIndex.html; sourceTree = "<group>"; };
-		F3680E341599E5EA00EE27D3 /* SFSoupQuerySpec.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFSoupQuerySpec.html; sourceTree = "<group>"; };
-		F3680E361599E5EA00EE27D3 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
-		F3680E371599E5EA00EE27D3 /* hierarchy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = hierarchy.html; sourceTree = "<group>"; };
-		F3680E391599E5EA00EE27D3 /* button_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bar_background.png; sourceTree = "<group>"; };
-		F3680E3A1599E5EA00EE27D3 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure.png; sourceTree = "<group>"; };
-		F3680E3B1599E5EA00EE27D3 /* disclosure_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_open.png; sourceTree = "<group>"; };
-		F3680E3C1599E5EA00EE27D3 /* title_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_background.png; sourceTree = "<group>"; };
-		F3680E3D1599E5EA00EE27D3 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = index.html; sourceTree = "<group>"; };
-		F3680E3F1599E5EA00EE27D3 /* SFOAuthCoordinatorDelegate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFOAuthCoordinatorDelegate.html; sourceTree = "<group>"; };
-		F3680E401599E5EA00EE27D3 /* SFRestDelegate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = SFRestDelegate.html; sourceTree = "<group>"; };
 		F3680E421599E5EA00EE27D3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		F3680E431599E5EA00EE27D3 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		F3680E441599E5EA00EE27D3 /* NSDictionary+NullHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NullHandling.h"; sourceTree = "<group>"; };
@@ -312,13 +221,10 @@
 		F3680E9A1599E64B00EE27D3 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
 		F3680EA01599E71800EE27D3 /* RDRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDRest.h; path = Nuance/Common/RDRest.h; sourceTree = "<group>"; };
 		F3680EA11599E71800EE27D3 /* RDRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDRest.m; path = Nuance/Common/RDRest.m; sourceTree = "<group>"; };
-		F3680EA41599EBAC00EE27D3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		F3680EA61599ECA000EE27D3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F3680EA81599ED2B00EE27D3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F3680EAA1599EDDB00EE27D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F3680EAC1599EDF600EE27D3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		F3680EAE1599EE1500EE27D3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		F3680EB01599EE2700EE27D3 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		F3680EB21599EE4800EE27D3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F3680EB41599EED900EE27D3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F36899F0159AEB2400A64A3F /* ico-check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico-check.png"; sourceTree = "<group>"; };
@@ -354,6 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F323BAFC15B740FB00D78B0E /* libsqlite3.0.dylib in Frameworks */,
 				F3680D461599E40400EE27D3 /* CoreGraphics.framework in Frameworks */,
 				F3680EAD1599EDFA00EE27D3 /* CFNetwork.framework in Frameworks */,
 				F3689A0C159B2CB100A64A3F /* AVFoundation.framework in Frameworks */,
@@ -361,12 +268,9 @@
 				F3680EB51599EEDE00EE27D3 /* MobileCoreServices.framework in Frameworks */,
 				F3680D421599E40400EE27D3 /* UIKit.framework in Frameworks */,
 				F3680EB31599EE4C00EE27D3 /* SystemConfiguration.framework in Frameworks */,
-				F3680EB11599EE2C00EE27D3 /* libxml2.dylib in Frameworks */,
-				F3680EAF1599EE1A00EE27D3 /* libz.dylib in Frameworks */,
 				F3680EAB1599EDE100EE27D3 /* QuartzCore.framework in Frameworks */,
 				F3680EA91599ED2C00EE27D3 /* CoreData.framework in Frameworks */,
 				F3680EA71599ECA000EE27D3 /* Security.framework in Frameworks */,
-				F3680EA51599EBAC00EE27D3 /* libsqlite3.0.dylib in Frameworks */,
 				F3680D441599E40400EE27D3 /* Foundation.framework in Frameworks */,
 				F3680E5D1599E5EA00EE27D3 /* libRestKit.a in Frameworks */,
 				F3680E5E1599E5EA00EE27D3 /* libSalesforceOAuth.a in Frameworks */,
@@ -419,18 +323,16 @@
 		F3680D401599E40400EE27D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F323BAFB15B740FA00D78B0E /* libsqlite3.0.dylib */,
 				F3689A09159B2CA000A64A3F /* AudioToolbox.framework */,
 				F3689A0B159B2CB100A64A3F /* AVFoundation.framework */,
 				F3689A07159B2C8400A64A3F /* SpeechKit.framework */,
 				F3680EB41599EED900EE27D3 /* MobileCoreServices.framework */,
 				F3680EB21599EE4800EE27D3 /* SystemConfiguration.framework */,
-				F3680EB01599EE2700EE27D3 /* libxml2.dylib */,
-				F3680EAE1599EE1500EE27D3 /* libz.dylib */,
 				F3680EAC1599EDF600EE27D3 /* CFNetwork.framework */,
 				F3680EAA1599EDDB00EE27D3 /* QuartzCore.framework */,
 				F3680EA81599ED2B00EE27D3 /* CoreData.framework */,
 				F3680EA61599ECA000EE27D3 /* Security.framework */,
-				F3680EA41599EBAC00EE27D3 /* libsqlite3.0.dylib */,
 				F3680D411599E40400EE27D3 /* UIKit.framework */,
 				F3680D431599E40400EE27D3 /* Foundation.framework */,
 				F3680D451599E40400EE27D3 /* CoreGraphics.framework */,
@@ -684,193 +586,10 @@
 		F3680DF91599E5EA00EE27D3 /* SalesforceSDK_release */ = {
 			isa = PBXGroup;
 			children = (
-				F3680DFA1599E5EA00EE27D3 /* Documentation */,
 				F3680E411599E5EA00EE27D3 /* include */,
 				F3680E501599E5EA00EE27D3 /* libSalesforceSDK.a */,
 			);
 			path = SalesforceSDK_release;
-			sourceTree = "<group>";
-		};
-		F3680DFA1599E5EA00EE27D3 /* Documentation */ = {
-			isa = PBXGroup;
-			children = (
-				F3680DFB1599E5EA00EE27D3 /* docset */,
-				F3680E271599E5EA00EE27D3 /* html */,
-			);
-			path = Documentation;
-			sourceTree = "<group>";
-		};
-		F3680DFB1599E5EA00EE27D3 /* docset */ = {
-			isa = PBXGroup;
-			children = (
-				F3680DFC1599E5EA00EE27D3 /* Contents */,
-			);
-			path = docset;
-			sourceTree = "<group>";
-		};
-		F3680DFC1599E5EA00EE27D3 /* Contents */ = {
-			isa = PBXGroup;
-			children = (
-				F3680DFD1599E5EA00EE27D3 /* Info.plist */,
-				F3680DFE1599E5EA00EE27D3 /* Resources */,
-			);
-			path = Contents;
-			sourceTree = "<group>";
-		};
-		F3680DFE1599E5EA00EE27D3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F3680DFF1599E5EA00EE27D3 /* Documents */,
-				F3680E191599E5EA00EE27D3 /* Nodes.xml */,
-				F3680E1A1599E5EA00EE27D3 /* Tokens1.xml */,
-				F3680E1B1599E5EA00EE27D3 /* Tokens10.xml */,
-				F3680E1C1599E5EA00EE27D3 /* Tokens11.xml */,
-				F3680E1D1599E5EA00EE27D3 /* Tokens12.xml */,
-				F3680E1E1599E5EA00EE27D3 /* Tokens13.xml */,
-				F3680E1F1599E5EA00EE27D3 /* Tokens2.xml */,
-				F3680E201599E5EA00EE27D3 /* Tokens3.xml */,
-				F3680E211599E5EA00EE27D3 /* Tokens4.xml */,
-				F3680E221599E5EA00EE27D3 /* Tokens5.xml */,
-				F3680E231599E5EA00EE27D3 /* Tokens6.xml */,
-				F3680E241599E5EA00EE27D3 /* Tokens7.xml */,
-				F3680E251599E5EA00EE27D3 /* Tokens8.xml */,
-				F3680E261599E5EA00EE27D3 /* Tokens9.xml */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		F3680DFF1599E5EA00EE27D3 /* Documents */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E001599E5EA00EE27D3 /* Categories */,
-				F3680E021599E5EA00EE27D3 /* Classes */,
-				F3680E0D1599E5EA00EE27D3 /* css */,
-				F3680E0F1599E5EA00EE27D3 /* hierarchy.html */,
-				F3680E101599E5EA00EE27D3 /* img */,
-				F3680E151599E5EA00EE27D3 /* index.html */,
-				F3680E161599E5EA00EE27D3 /* Protocols */,
-			);
-			path = Documents;
-			sourceTree = "<group>";
-		};
-		F3680E001599E5EA00EE27D3 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E011599E5EA00EE27D3 /* NSDictionary(NullHandling).html */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		F3680E021599E5EA00EE27D3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E031599E5EA00EE27D3 /* FMDatabase.html */,
-				F3680E041599E5EA00EE27D3 /* SFJsonUtils.html */,
-				F3680E051599E5EA00EE27D3 /* SFOAuthCoordinator.html */,
-				F3680E061599E5EA00EE27D3 /* SFOAuthCredentials.html */,
-				F3680E071599E5EA00EE27D3 /* SFRestAPI.html */,
-				F3680E081599E5EA00EE27D3 /* SFRestRequest.html */,
-				F3680E091599E5EA00EE27D3 /* SFSmartStore.html */,
-				F3680E0A1599E5EA00EE27D3 /* SFSoupCursor.html */,
-				F3680E0B1599E5EA00EE27D3 /* SFSoupIndex.html */,
-				F3680E0C1599E5EA00EE27D3 /* SFSoupQuerySpec.html */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		F3680E0D1599E5EA00EE27D3 /* css */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E0E1599E5EA00EE27D3 /* styles.css */,
-			);
-			path = css;
-			sourceTree = "<group>";
-		};
-		F3680E101599E5EA00EE27D3 /* img */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E111599E5EA00EE27D3 /* button_bar_background.png */,
-				F3680E121599E5EA00EE27D3 /* disclosure.png */,
-				F3680E131599E5EA00EE27D3 /* disclosure_open.png */,
-				F3680E141599E5EA00EE27D3 /* title_background.png */,
-			);
-			path = img;
-			sourceTree = "<group>";
-		};
-		F3680E161599E5EA00EE27D3 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E171599E5EA00EE27D3 /* SFOAuthCoordinatorDelegate.html */,
-				F3680E181599E5EA00EE27D3 /* SFRestDelegate.html */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		F3680E271599E5EA00EE27D3 /* html */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E281599E5EA00EE27D3 /* Categories */,
-				F3680E2A1599E5EA00EE27D3 /* Classes */,
-				F3680E351599E5EA00EE27D3 /* css */,
-				F3680E371599E5EA00EE27D3 /* hierarchy.html */,
-				F3680E381599E5EA00EE27D3 /* img */,
-				F3680E3D1599E5EA00EE27D3 /* index.html */,
-				F3680E3E1599E5EA00EE27D3 /* Protocols */,
-			);
-			path = html;
-			sourceTree = "<group>";
-		};
-		F3680E281599E5EA00EE27D3 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E291599E5EA00EE27D3 /* NSDictionary(NullHandling).html */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		F3680E2A1599E5EA00EE27D3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E2B1599E5EA00EE27D3 /* FMDatabase.html */,
-				F3680E2C1599E5EA00EE27D3 /* SFJsonUtils.html */,
-				F3680E2D1599E5EA00EE27D3 /* SFOAuthCoordinator.html */,
-				F3680E2E1599E5EA00EE27D3 /* SFOAuthCredentials.html */,
-				F3680E2F1599E5EA00EE27D3 /* SFRestAPI.html */,
-				F3680E301599E5EA00EE27D3 /* SFRestRequest.html */,
-				F3680E311599E5EA00EE27D3 /* SFSmartStore.html */,
-				F3680E321599E5EA00EE27D3 /* SFSoupCursor.html */,
-				F3680E331599E5EA00EE27D3 /* SFSoupIndex.html */,
-				F3680E341599E5EA00EE27D3 /* SFSoupQuerySpec.html */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		F3680E351599E5EA00EE27D3 /* css */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E361599E5EA00EE27D3 /* styles.css */,
-			);
-			path = css;
-			sourceTree = "<group>";
-		};
-		F3680E381599E5EA00EE27D3 /* img */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E391599E5EA00EE27D3 /* button_bar_background.png */,
-				F3680E3A1599E5EA00EE27D3 /* disclosure.png */,
-				F3680E3B1599E5EA00EE27D3 /* disclosure_open.png */,
-				F3680E3C1599E5EA00EE27D3 /* title_background.png */,
-			);
-			path = img;
-			sourceTree = "<group>";
-		};
-		F3680E3E1599E5EA00EE27D3 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				F3680E3F1599E5EA00EE27D3 /* SFOAuthCoordinatorDelegate.html */,
-				F3680E401599E5EA00EE27D3 /* SFRestDelegate.html */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		F3680E411599E5EA00EE27D3 /* include */ = {
@@ -1009,41 +728,6 @@
 			files = (
 				F3680D4C1599E40400EE27D3 /* InfoPlist.strings in Resources */,
 				F3680D551599E40400EE27D3 /* MainStoryboard.storyboard in Resources */,
-				F3680E611599E5EB00EE27D3 /* Info.plist in Resources */,
-				F3680E761599E5EB00EE27D3 /* Nodes.xml in Resources */,
-				F3680E771599E5EB00EE27D3 /* Tokens1.xml in Resources */,
-				F3680E781599E5EB00EE27D3 /* Tokens10.xml in Resources */,
-				F3680E791599E5EB00EE27D3 /* Tokens11.xml in Resources */,
-				F3680E7A1599E5EB00EE27D3 /* Tokens12.xml in Resources */,
-				F3680E7B1599E5EB00EE27D3 /* Tokens13.xml in Resources */,
-				F3680E7C1599E5EB00EE27D3 /* Tokens2.xml in Resources */,
-				F3680E7D1599E5EB00EE27D3 /* Tokens3.xml in Resources */,
-				F3680E7E1599E5EB00EE27D3 /* Tokens4.xml in Resources */,
-				F3680E7F1599E5EB00EE27D3 /* Tokens5.xml in Resources */,
-				F3680E801599E5EB00EE27D3 /* Tokens6.xml in Resources */,
-				F3680E811599E5EB00EE27D3 /* Tokens7.xml in Resources */,
-				F3680E821599E5EB00EE27D3 /* Tokens8.xml in Resources */,
-				F3680E831599E5EB00EE27D3 /* Tokens9.xml in Resources */,
-				F3680E841599E5EB00EE27D3 /* NSDictionary(NullHandling).html in Resources */,
-				F3680E851599E5EB00EE27D3 /* FMDatabase.html in Resources */,
-				F3680E861599E5EB00EE27D3 /* SFJsonUtils.html in Resources */,
-				F3680E871599E5EB00EE27D3 /* SFOAuthCoordinator.html in Resources */,
-				F3680E881599E5EB00EE27D3 /* SFOAuthCredentials.html in Resources */,
-				F3680E891599E5EB00EE27D3 /* SFRestAPI.html in Resources */,
-				F3680E8A1599E5EB00EE27D3 /* SFRestRequest.html in Resources */,
-				F3680E8B1599E5EB00EE27D3 /* SFSmartStore.html in Resources */,
-				F3680E8C1599E5EB00EE27D3 /* SFSoupCursor.html in Resources */,
-				F3680E8D1599E5EB00EE27D3 /* SFSoupIndex.html in Resources */,
-				F3680E8E1599E5EB00EE27D3 /* SFSoupQuerySpec.html in Resources */,
-				F3680E8F1599E5EB00EE27D3 /* styles.css in Resources */,
-				F3680E901599E5EB00EE27D3 /* hierarchy.html in Resources */,
-				F3680E911599E5EB00EE27D3 /* button_bar_background.png in Resources */,
-				F3680E921599E5EB00EE27D3 /* disclosure.png in Resources */,
-				F3680E931599E5EB00EE27D3 /* disclosure_open.png in Resources */,
-				F3680E941599E5EB00EE27D3 /* title_background.png in Resources */,
-				F3680E951599E5EB00EE27D3 /* index.html in Resources */,
-				F3680E961599E5EB00EE27D3 /* SFOAuthCoordinatorDelegate.html in Resources */,
-				F3680E971599E5EB00EE27D3 /* SFRestDelegate.html in Resources */,
 				F36899F2159AEB2400A64A3F /* ico-check.png in Resources */,
 				F36899F3159AEB2400A64A3F /* ico-check@2x.png in Resources */,
 				F3689A10159B4F3A00A64A3F /* earcon_cancel.wav in Resources */,
@@ -1202,6 +886,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nuance/Nuance-Prefix.pch";
 				INFOPLIST_FILE = "Nuance/Nuance-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SFDC/RestKit\"",
@@ -1230,6 +915,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nuance/Nuance-Prefix.pch";
 				INFOPLIST_FILE = "Nuance/Nuance-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SFDC/RestKit\"",
